@@ -314,9 +314,9 @@ function Index() {
             </div>
             <p className="text-lg leading-relaxed text-foreground">
               Former cryptologic linguist turned writer and creative
-              strategist.&nbsp;I work with individuals and brands to ideate,
+              strategist.&nbsp;I work with individuals and brands to brainstorm,
               create, and test out fresh ideas for their worlds. Let’s collab
-              and turn your concepts into reality.
+              and turn your story into reality.
             </p>
           </div>
         </div>
