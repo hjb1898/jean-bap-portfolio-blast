@@ -314,8 +314,9 @@ function Index() {
             </div>
             <p className="text-lg leading-relaxed text-foreground">
               Former cryptologic linguist specialized in Arabic and GSM/CDMA
-              technologies. Now writing and collaborating with individuals
-              interested in building creative new ideas for their worlds.
+              wireless technologies. Now writing and collaborating with
+              individuals interested in creating new ideas and products for
+              their worlds.
             </p>
           </div>
         </div>
