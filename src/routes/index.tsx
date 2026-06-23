@@ -52,7 +52,7 @@ const books = [
     cover: bookPoems,
     title: "Stupid Poems",
     description:
-      "Poetry written from the perspective of an ambitious English professor, guided readers through the Sisyphean tale of youth and becoming.",
+      "Poetry written from the perspective of an English professor who's fascinated with what it means to stupidly be lost in \"the world.\"",
   },
   {
     cover: bookOgre,
@@ -66,35 +66,35 @@ const writings = [
   {
     platform: "Medium",
     name: "H. Jean-Baptiste",
-    blurb: "Essays and longform on Medium.",
-    href: "https://medium.com/",
+    blurb: "Literary playhouse of poetry, short stories, and creative nonfiction.",
+    href: "https://medium.com/@jbography",
   },
   {
-    platform: "Substack — PONSAYS",
+    platform: "PONSAYS",
     name: "Thoughts about the being of things",
-    blurb: "Philosophy and observation, delivered to your inbox.",
-    href: "https://substack.com/",
+    blurb: "Thoughts about being of things",
+    href: "https://substack.com/@ponsays",
   },
   {
     platform: "Beehiiv",
     name: "Building · Dwelling · Thinking",
-    blurb: "Notes on making, living, and the space between.",
-    href: "https://www.beehiiv.com/",
+    blurb: "Notes on making, living, and the authentic space in between.",
+    href: "https://bdt.beehiiv.com",
   },
 ];
 
 const wares = [
   {
     title: "9L",
-    description: "An alternative apparel brand concept rooted in intentional design.",
+    description: "An apparel concept that champions ambition.",
   },
   {
-    title: "Neurodivergent Productivity App",
+    title: "Neurodivergent Productivity App (prototype)",
     description:
-      "A tool that gradually entices users to get consistently addicted to their project.",
+      "A tool that gradually entices users to get addicted to their goals and projects.",
   },
   {
-    title: "Restaurant Menu Education",
+    title: "Restaurant Menu Analyzer (prototype)",
     description:
       "A web application for restaurant marketing centered around menu education.",
   },
@@ -313,12 +313,9 @@ function Index() {
               <h2 className="text-3xl tracking-tight text-foreground">ABOUT</h2>
             </div>
             <p className="text-lg leading-relaxed text-foreground">
-              Ex-cryptologic linguist. Now building intentional products at the
-              intersection of philosophy, strategy, and execution. Unfiltered perspective
-              on ADHD, frameworks, and what actually works.
-            </p>
-            <p className="mt-6 inline-block bg-secondary px-3 py-1 font-display text-xs tracking-[0.2em] text-secondary-foreground">
-              BUILDING · DWELLING · THINKING
+              Ex-cryptologic linguist specialized in Arabic and GSM/CDMA
+              technologies. Now writing and collaborating with individuals
+              interested in building creative ways to exist within their worlds.
             </p>
           </div>
         </div>
