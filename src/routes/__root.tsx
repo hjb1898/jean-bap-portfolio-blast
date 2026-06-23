@@ -77,16 +77,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "H. Jean-Baptiste — Writer · Strategist · Builder" },
+      {
+        name: "description",
+        content:
+          "The portfolio of H. Jean-Baptiste — ex-cryptologic linguist building intentional products at the intersection of philosophy, strategy, and execution. Works, writings, and wares.",
+      },
+      { name: "author", content: "H. Jean-Baptiste" },
+      { property: "og:title", content: "H. Jean-Baptiste — Writer · Strategist · Builder" },
+      {
+        property: "og:description",
+        content:
+          "Books, newsletters, and product concepts from H. Jean-Baptiste. Unfiltered, unapologetic energy.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
