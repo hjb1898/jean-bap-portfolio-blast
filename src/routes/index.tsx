@@ -52,7 +52,7 @@ const books = [
     cover: bookPoems,
     title: "Stupid Poems",
     description:
-      "Poetry written from the perspective of an ambitious English professor, guided readers through the Sisyphean tale of youth and becoming.",
+      "Poetry written from the perspective of an English professor who's fascinated with what it means to stupidly be lost in \"the world.\"",
   },
   {
     cover: bookOgre,
