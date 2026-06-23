@@ -313,10 +313,10 @@ function Index() {
               <h2 className="text-3xl tracking-tight text-foreground">ABOUT ME</h2>
             </div>
             <p className="text-lg leading-relaxed text-foreground">
-              Former cryptologic linguist specialized in Arabic and GSM/CDMA
-              wireless technologies. Passionate about writing and collaborating
-              with ambitious individuals to create authentic experiences,
-              products, and brands.
+              Former cryptologic linguist turned writer and creative
+              strategist.&nbsp;I work with individuals and brands to ideate,
+              create, and test out fresh ideas for their worlds. Let’s collab
+              and turn your concepts into reality.
             </p>
           </div>
         </div>
