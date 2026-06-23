@@ -86,15 +86,15 @@ const writings = [
 const wares = [
   {
     title: "9L",
-    description: "An alternative apparel brand concept rooted in intentional design.",
+    description: "An apparel concept that champions ambition.",
   },
   {
-    title: "Neurodivergent Productivity App",
+    title: "Neurodivergent Productivity App (prototype)",
     description:
-      "A tool that gradually entices users to get consistently addicted to their project.",
+      "A tool that gradually entices users to get addicted to their goals and projects.",
   },
   {
-    title: "Restaurant Menu Education",
+    title: "Restaurant Menu Analyzer (prototype)",
     description:
       "A web application for restaurant marketing centered around menu education.",
   },
