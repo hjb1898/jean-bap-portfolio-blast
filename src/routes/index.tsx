@@ -313,12 +313,9 @@ function Index() {
               <h2 className="text-3xl tracking-tight text-foreground">ABOUT</h2>
             </div>
             <p className="text-lg leading-relaxed text-foreground">
-              Ex-cryptologic linguist. Now building intentional products at the
-              intersection of philosophy, strategy, and execution. Unfiltered perspective
-              on ADHD, frameworks, and what actually works.
-            </p>
-            <p className="mt-6 inline-block bg-secondary px-3 py-1 font-display text-xs tracking-[0.2em] text-secondary-foreground">
-              BUILDING · DWELLING · THINKING
+              Ex-cryptologic linguist specialized in Arabic and GSM/CDMA
+              technologies. Now writing and collaborating with individuals
+              interested in building creative ways to exist within their worlds.
             </p>
           </div>
         </div>
