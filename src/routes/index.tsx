@@ -70,9 +70,9 @@ const writings = [
     href: "https://medium.com/@jbography",
   },
   {
-    platform: "PONSAYS",
-    name: "Thoughts about the being of things",
-    blurb: "Thoughts about being of things",
+    platform: "Substack",
+    name: "PONSAYS",
+    blurb: "Thoughts about the being of things",
     href: "https://substack.com/@ponsays",
   },
   {
