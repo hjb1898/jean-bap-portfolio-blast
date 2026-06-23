@@ -66,20 +66,20 @@ const writings = [
   {
     platform: "Medium",
     name: "H. Jean-Baptiste",
-    blurb: "Essays and longform on Medium.",
-    href: "https://medium.com/",
+    blurb: "Literary playhouse of poetry, short stories, and creative nonfiction.",
+    href: "https://medium.com/@jbography",
   },
   {
-    platform: "Substack — PONSAYS",
+    platform: "PONSAYS",
     name: "Thoughts about the being of things",
-    blurb: "Philosophy and observation, delivered to your inbox.",
-    href: "https://substack.com/",
+    blurb: "Thoughts about being of things",
+    href: "https://substack.com/@ponsays",
   },
   {
     platform: "Beehiiv",
     name: "Building · Dwelling · Thinking",
-    blurb: "Notes on making, living, and the space between.",
-    href: "https://www.beehiiv.com/",
+    blurb: "Notes on making, living, and the authentic space in between.",
+    href: "https://bdt.beehiiv.com",
   },
 ];
 
