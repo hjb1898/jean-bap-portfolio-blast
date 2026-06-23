@@ -78,7 +78,7 @@ const writings = [
   {
     platform: "Beehiiv",
     name: "Building · Dwelling · Thinking",
-    blurb: "Creativity, technology, and Mental Health.",
+    blurb: "Creativity, technology, and mental Health.",
     href: "https://bdt.beehiiv.com",
   },
 ];
