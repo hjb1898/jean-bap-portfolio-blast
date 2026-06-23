@@ -78,7 +78,7 @@ const writings = [
   {
     platform: "Beehiiv",
     name: "Building · Dwelling · Thinking",
-    blurb: "Notes on making, living, and the authentic space in between.",
+    blurb: "Creativity, technology, and Mental Health.",
     href: "https://bdt.beehiiv.com",
   },
 ];
