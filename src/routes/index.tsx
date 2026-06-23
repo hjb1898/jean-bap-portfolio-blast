@@ -313,9 +313,9 @@ function Index() {
               <h2 className="text-3xl tracking-tight text-foreground">ABOUT</h2>
             </div>
             <p className="text-lg leading-relaxed text-foreground">
-              Ex-cryptologic linguist specialized in Arabic and GSM/CDMA
+              Former cryptologic linguist specialized in Arabic and GSM/CDMA
               technologies. Now writing and collaborating with individuals
-              interested in building creative ways to exist within their worlds.
+              interested in building creative new ideas for their worlds.
             </p>
           </div>
         </div>
