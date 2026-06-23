@@ -310,13 +310,13 @@ function Index() {
             </button>
             <div className="mb-4 flex items-center gap-3">
               <RedSquare />
-              <h2 className="text-3xl tracking-tight text-foreground">ABOUT</h2>
+              <h2 className="text-3xl tracking-tight text-foreground">ABOUT ME</h2>
             </div>
             <p className="text-lg leading-relaxed text-foreground">
               Former cryptologic linguist specialized in Arabic and GSM/CDMA
-              wireless technologies. Now writing and collaborating with
-              individuals interested in creating and testing out new ideas for
-              their worlds.
+              wireless technologies. Passionate about writing and collaborating
+              with ambitious individuals to create authentic experiences,
+              products, and brands.
             </p>
           </div>
         </div>
