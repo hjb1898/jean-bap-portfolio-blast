@@ -8,6 +8,8 @@ import {
   Package,
   ArrowUpRight,
   X,
+  MessageSquare,
+  CalendarDays,
 } from "lucide-react";
 
 import bookDeath from "@/assets/book-death.jpg";
