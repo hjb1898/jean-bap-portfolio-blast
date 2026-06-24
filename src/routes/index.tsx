@@ -100,6 +100,35 @@ const wares = [
   },
 ];
 
+// Easy to swap: update this URL with the real Calendly link.
+const CALENDLY_URL = "https://calendly.com/hjeanbaptiste";
+
+const marqueeItems = ["Strategy", "Storytelling", "Prototyping", "Creative Direction"];
+
+const focusAreas = [
+  {
+    title: "FOUNDER STRATEGY",
+    accent: "bg-[radial-gradient(circle_at_20%_20%,var(--red-pop),transparent_55%),radial-gradient(circle_at_80%_70%,var(--yellow-pop),transparent_50%),var(--electric-deep)]",
+    body: "Most founders aren't missing an idea. They've got something real, just buried under what they think they're supposed to say. I help dig it out. I spent my Army years as a cryptologic linguist doing signals intelligence, listening through noise for the thing that matters. Strategy works the same way: find the objective, test what holds, debrief honestly. Part tactics, part story.",
+  },
+  {
+    title: "BRAND DEVELOPMENT",
+    accent: "bg-[radial-gradient(circle_at_75%_25%,var(--yellow-pop),transparent_55%),radial-gradient(circle_at_25%_80%,var(--red-pop),transparent_50%),var(--electric-deep)]",
+    body: "The story's usually already there, sitting in what you've built and how you treat people. I just notice it and give it shape. I care about intentionality, about how people actually exist inside their own worlds. A brand done right is that world made legible. I picked up a version of this in bars and restaurants, watching how a menu's design or a room's feel quietly shaped what people chose.",
+  },
+  {
+    title: "APP & WEBSITE DEVELOPMENT",
+    accent: "bg-[linear-gradient(115deg,var(--red-pop)_0%,transparent_45%),linear-gradient(285deg,var(--yellow-pop)_0%,transparent_45%),var(--electric-deep)]",
+    body: "I prototype fast, so we're reacting to something real in days instead of talking in the abstract for weeks. I run it like a sprint: build, test, adjust. The Army organization in me, planning and debriefing each round. When the details need nailing down, I bring in partner designers and developers. Cuts cost, cuts time, smooths the stretch between idea and finished thing.",
+  },
+  {
+    title: "CREATIVE DIRECTION",
+    accent: "bg-[radial-gradient(circle_at_50%_15%,var(--yellow-pop),transparent_45%),radial-gradient(circle_at_15%_85%,var(--red-pop),transparent_45%),radial-gradient(circle_at_85%_85%,var(--red-bright),transparent_45%),var(--electric-deep)]",
+    body: "Making sure everything you put out actually says what you mean. Typography is an argument. Color takes a position. Ten years of writing taught me form and feeling can't be separated. The hospitality instinct does the rest: reading a room, knowing how aesthetics pull people in and hold them there.",
+  },
+];
+
+
 function RedSquare() {
   return (
     <span className="inline-block size-5 shrink-0 bg-primary shadow-[3px_3px_0_0_var(--electric-deep)] sm:size-6" />
