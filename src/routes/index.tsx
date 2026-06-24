@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
-  ChevronDown,
   User,
   BookOpen,
   PenLine,
@@ -10,6 +9,10 @@ import {
   X,
   MessageSquare,
   CalendarDays,
+  Target,
+  Fingerprint,
+  Code,
+  Compass,
 } from "lucide-react";
 
 import bookDeath from "@/assets/book-death.jpg";
@@ -110,26 +113,25 @@ const marqueeItems = ["Strategy", "Storytelling", "Prototyping", "Creative Direc
 const focusAreas = [
   {
     title: "FOUNDER STRATEGY",
-    accent: "bg-[radial-gradient(circle_at_20%_20%,var(--red-pop),transparent_55%),radial-gradient(circle_at_80%_70%,var(--yellow-pop),transparent_50%),var(--electric-deep)]",
+    Icon: Target,
     body: "Most founders aren't missing an idea. They've got something real, just buried under what they think they're supposed to say. I help dig it out. I spent my Army years as a cryptologic linguist doing signals intelligence, listening through noise for the thing that matters. Strategy works the same way: find the objective, test what holds, debrief honestly. Part tactics, part story.",
   },
   {
     title: "BRAND DEVELOPMENT",
-    accent: "bg-[radial-gradient(circle_at_75%_25%,var(--yellow-pop),transparent_55%),radial-gradient(circle_at_25%_80%,var(--red-pop),transparent_50%),var(--electric-deep)]",
+    Icon: Fingerprint,
     body: "The story's usually already there, sitting in what you've built and how you treat people. I just notice it and give it shape. I care about intentionality, about how people actually exist inside their own worlds. A brand done right is that world made legible. I picked up a version of this in bars and restaurants, watching how a menu's design or a room's feel quietly shaped what people chose.",
   },
   {
     title: "APP & WEBSITE DEVELOPMENT",
-    accent: "bg-[linear-gradient(115deg,var(--red-pop)_0%,transparent_45%),linear-gradient(285deg,var(--yellow-pop)_0%,transparent_45%),var(--electric-deep)]",
+    Icon: Code,
     body: "I prototype fast, so we're reacting to something real in days instead of talking in the abstract for weeks. I run it like a sprint: build, test, adjust. The Army organization in me, planning and debriefing each round. When the details need nailing down, I bring in partner designers and developers. Cuts cost, cuts time, smooths the stretch between idea and finished thing.",
   },
   {
     title: "CREATIVE DIRECTION",
-    accent: "bg-[radial-gradient(circle_at_50%_15%,var(--yellow-pop),transparent_45%),radial-gradient(circle_at_15%_85%,var(--red-pop),transparent_45%),radial-gradient(circle_at_85%_85%,var(--red-bright),transparent_45%),var(--electric-deep)]",
+    Icon: Compass,
     body: "Making sure everything you put out actually says what you mean. Typography is an argument. Color takes a position. Ten years of writing taught me form and feeling can't be separated. The hospitality instinct does the rest: reading a room, knowing how aesthetics pull people in and hold them there.",
   },
 ];
-
 
 function RedSquare() {
   return (
@@ -137,55 +139,112 @@ function RedSquare() {
   );
 }
 
-type AccordionSectionProps = {
-  id: string;
+function CtaButtons() {
+  return (
+    <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <a
+        href="mailto:hello@hjeanbaptiste.com"
+        className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-primary bg-primary px-5 py-3 font-display text-sm tracking-widest text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--yellow-pop)]"
+      >
+        <MessageSquare className="size-5" />
+        LET&apos;S TALK
+      </a>
+      <a
+        href={CALENDLY_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-secondary bg-secondary px-5 py-3 font-display text-sm tracking-widest text-secondary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--red-pop)]"
+      >
+        <CalendarDays className="size-5" />
+        SCHEDULE A CALL
+      </a>
+    </div>
+  );
+}
+
+type ModalProps = {
   title: string;
-  icon: React.ReactNode;
-  open: boolean;
-  onToggle: () => void;
+  onClose: () => void;
   children: React.ReactNode;
+  maxWidth?: string;
 };
 
-function AccordionSection({ title, icon, open, onToggle, children }: AccordionSectionProps) {
+function Modal({ title, onClose, children, maxWidth = "max-w-3xl" }: ModalProps) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
   return (
-    <div className="border-y-4 border-primary">
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={open}
-        className="group flex w-full items-center gap-4 py-6 text-left transition-colors hover:bg-electric-deep"
-      >
-        <RedSquare />
-        <span className="text-muted-foreground transition-colors group-hover:text-secondary">
-          {icon}
-        </span>
-        <h2 className="flex-1 text-3xl tracking-tight text-foreground sm:text-5xl">
-          {title}
-        </h2>
-        <ChevronDown
-          className={`size-8 shrink-0 text-primary transition-transform duration-300 ${
-            open ? "rotate-180 text-secondary" : ""
-          }`}
-        />
-      </button>
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-electric-deep/80 px-5 py-10 animate-fade-in"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={title}
+    >
       <div
-        className={`grid transition-all duration-500 ease-out ${
-          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
+        className={`relative max-h-[85vh] w-full ${maxWidth} overflow-y-auto rounded-sm border-4 border-secondary bg-background p-6 shadow-[10px_10px_0_0_var(--red-pop)] animate-scale-in sm:p-8`}
+        onClick={(e) => e.stopPropagation()}
       >
-        <div className="overflow-hidden">
-          <div className="pb-10">{children}</div>
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute right-4 top-4 z-10 rounded-sm border-2 border-primary bg-background p-1 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+        >
+          <X className="size-5" />
+        </button>
+        <div className="mb-6 flex items-center gap-3">
+          <RedSquare />
+          <h2 className="text-2xl tracking-tight text-foreground sm:text-3xl">{title}</h2>
         </div>
+        {children}
       </div>
     </div>
   );
 }
 
-function Index() {
-  const [openSection, setOpenSection] = useState<string | null>("works");
-  const [aboutOpen, setAboutOpen] = useState(false);
+type WorkSection = "books" | "newsletters" | "projects";
 
-  const toggle = (id: string) => setOpenSection((cur) => (cur === id ? null : id));
+const workTiles: { id: WorkSection; label: string; icon: React.ReactNode }[] = [
+  { id: "books", label: "Books", icon: <BookOpen className="size-8 sm:size-10" /> },
+  { id: "newsletters", label: "Newsletters", icon: <PenLine className="size-8 sm:size-10" /> },
+  { id: "projects", label: "Projects", icon: <Package className="size-8 sm:size-10" /> },
+];
+
+function Index() {
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [openWork, setOpenWork] = useState<WorkSection | null>(null);
+
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const groupRef = useRef<HTMLDivElement>(null);
+
+  // Drive marquee horizontally from vertical scroll position.
+  useEffect(() => {
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const el = marqueeRef.current;
+      const group = groupRef.current;
+      if (!el || !group) return;
+      const repWidth = group.offsetWidth || 1;
+      const offset = (window.scrollY * 0.45) % repWidth;
+      el.style.transform = `translate3d(${-offset}px,0,0)`;
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    update();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   return (
     <main className="min-h-screen bg-background">
@@ -231,11 +290,16 @@ function Index() {
           </h2>
         </section>
 
-        {/* Auto-scrolling marquee */}
+        {/* Scroll-driven marquee */}
         <section className="mb-16 overflow-hidden border-y-4 border-primary bg-electric-deep py-4 sm:mb-24">
-          <div className="flex w-max animate-marquee">
-            {[0, 1].map((dup) => (
-              <div key={dup} className="flex shrink-0 items-center" aria-hidden={dup === 1}>
+          <div ref={marqueeRef} className="flex w-max will-change-transform">
+            {[0, 1, 2].map((dup) => (
+              <div
+                key={dup}
+                ref={dup === 0 ? groupRef : undefined}
+                className="flex shrink-0 items-center"
+                aria-hidden={dup !== 0}
+              >
                 {marqueeItems.map((item) => (
                   <span key={item} className="flex items-center">
                     <span className="px-6 font-display text-xl tracking-tight text-secondary sm:text-3xl">
@@ -250,31 +314,38 @@ function Index() {
         </section>
 
         {/* Current Focus */}
-        <section className="mb-16 sm:mb-24">
+        <section className="mb-12 sm:mb-16">
           <div className="mb-8 flex items-center gap-4">
             <RedSquare />
             <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
               Current Focus
             </h2>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {focusAreas.map((area) => (
+          <div className="flex flex-col gap-5">
+            {focusAreas.map(({ title, body, Icon }) => (
               <article
-                key={area.title}
-                className="group flex flex-col overflow-hidden rounded-sm border-4 border-primary bg-electric-deep transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)]"
+                key={title}
+                className="group flex flex-col gap-5 rounded-sm border-4 border-primary bg-electric-deep p-5 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)] sm:flex-row sm:items-start sm:gap-7 sm:p-7"
               >
-                <div className={`h-28 w-full ${area.accent}`} aria-hidden="true" />
-                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <div className="flex items-center gap-4 sm:w-64 sm:shrink-0 sm:flex-col sm:items-start">
+                  <span className="grid size-16 shrink-0 place-items-center rounded-sm border-4 border-secondary bg-primary text-primary-foreground transition-colors group-hover:bg-secondary group-hover:text-secondary-foreground sm:size-20">
+                    <Icon className="size-8 sm:size-10" />
+                  </span>
                   <h3 className="font-display text-xl leading-tight text-secondary sm:text-2xl">
-                    {area.title}
+                    {title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                    {area.body}
-                  </p>
                 </div>
+                <p className="flex-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  {body}
+                </p>
               </article>
             ))}
           </div>
+        </section>
+
+        {/* CTA below focus */}
+        <section className="mb-16 sm:mb-24">
+          <CtaButtons />
         </section>
 
         {/* Personal Work */}
@@ -285,97 +356,26 @@ function Index() {
           </h2>
         </div>
 
-        {/* Accordions */}
-        <section>
-          <AccordionSection
-            id="works"
-
-            title="WORKS"
-            icon={<BookOpen className="size-6 sm:size-7" />}
-            open={openSection === "works"}
-            onToggle={() => toggle("works")}
-          >
-            <div className="grid gap-6 sm:grid-cols-2">
-              {books.map((book) => (
-                <article
-                  key={book.title}
-                  className="group flex gap-4 rounded-sm border-2 border-primary bg-electric-deep p-4 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[6px_6px_0_0_var(--red-pop)]"
-                >
-                  <img
-                    src={book.cover}
-                    alt={`Cover of ${book.title}`}
-                    loading="lazy"
-                    width={1024}
-                    height={1024}
-                    className="size-28 shrink-0 rounded-sm border-2 border-primary object-cover transition-colors group-hover:border-secondary sm:size-32"
-                  />
-                  <div className="min-w-0">
-                    <h3 className="font-display text-base leading-tight text-secondary sm:text-lg">
-                      {book.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-snug text-muted-foreground">
-                      {book.description}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </AccordionSection>
-
-          <AccordionSection
-            id="writings"
-            title="WRITINGS"
-            icon={<PenLine className="size-6 sm:size-7" />}
-            open={openSection === "writings"}
-            onToggle={() => toggle("writings")}
-          >
-            <div className="grid gap-4 sm:grid-cols-3">
-              {writings.map((w) => (
-                <a
-                  key={w.platform}
-                  href={w.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex flex-col rounded-sm border-2 border-primary bg-electric-deep p-5 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[6px_6px_0_0_var(--yellow-pop)]"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-display text-xs tracking-widest text-primary transition-colors group-hover:text-secondary">
-                      {w.platform}
-                    </span>
-                    <ArrowUpRight className="size-5 text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </div>
-                  <h3 className="mt-3 font-display text-lg leading-tight text-foreground">
-                    {w.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{w.blurb}</p>
-                </a>
-              ))}
-            </div>
-          </AccordionSection>
-
-          <AccordionSection
-            id="wares"
-            title="WARES"
-            icon={<Package className="size-6 sm:size-7" />}
-            open={openSection === "wares"}
-            onToggle={() => toggle("wares")}
-          >
-            <div className="grid gap-4 sm:grid-cols-3">
-              {wares.map((ware) => (
-                <article
-                  key={ware.title}
-                  className="group rounded-sm border-2 border-primary bg-electric-deep p-5 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[6px_6px_0_0_var(--red-pop)]"
-                >
-                  <h3 className="font-display text-xl leading-tight text-secondary">
-                    {ware.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-snug text-muted-foreground">
-                    {ware.description}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </AccordionSection>
+        {/* Work tiles */}
+        <section className="grid gap-5 sm:grid-cols-3">
+          {workTiles.map((tile) => (
+            <button
+              key={tile.id}
+              type="button"
+              onClick={() => setOpenWork(tile.id)}
+              className="group flex flex-col items-start gap-4 rounded-sm border-4 border-primary bg-electric-deep p-6 text-left transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[8px_8px_0_0_var(--red-pop)] sm:p-8"
+            >
+              <span className="text-secondary transition-transform group-hover:-rotate-6">
+                {tile.icon}
+              </span>
+              <span className="flex w-full items-center justify-between">
+                <span className="font-display text-2xl tracking-tight text-foreground sm:text-3xl">
+                  {tile.label}
+                </span>
+                <ArrowUpRight className="size-6 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-secondary" />
+              </span>
+            </button>
+          ))}
         </section>
 
         <footer className="mt-16 text-center font-display text-xs tracking-[0.3em] text-muted-foreground">
@@ -385,55 +385,96 @@ function Index() {
 
       {/* About Modal */}
       {aboutOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-electric-deep/80 px-5 animate-fade-in"
-          onClick={() => setAboutOpen(false)}
-          role="dialog"
-          aria-modal="true"
-          aria-label="About H. Jean-Baptiste"
-        >
-          <div
-            className="relative w-full max-w-lg rounded-sm border-4 border-secondary bg-background p-8 shadow-[10px_10px_0_0_var(--red-pop)] animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              type="button"
-              onClick={() => setAboutOpen(false)}
-              aria-label="Close"
-              className="absolute right-4 top-4 rounded-sm border-2 border-primary p-1 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              <X className="size-5" />
-            </button>
-            <div className="mb-4 flex items-center gap-3">
-              <RedSquare />
-              <h2 className="text-3xl tracking-tight text-foreground">ABOUT ME</h2>
-            </div>
-            <p className="text-lg leading-relaxed text-foreground">
-              Former cryptologic linguist specialized in Arabic and GSM/CDMA
-              technologies. Now writing and collaborating with individuals
-              interested in building creative ways to exist within their worlds.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <a
-                href="mailto:hello@hjeanbaptiste.com"
-                className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-primary bg-primary px-5 py-3 font-display text-sm tracking-widest text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--yellow-pop)]"
+        <Modal title="ABOUT ME" onClose={() => setAboutOpen(false)} maxWidth="max-w-lg">
+          <p className="text-lg leading-relaxed text-foreground">
+            Former cryptologic linguist specialized in Arabic and GSM/CDMA
+            technologies. Now writing and collaborating with individuals
+            interested in building creative ways to exist within their worlds.
+          </p>
+          <div className="mt-8">
+            <CtaButtons />
+          </div>
+        </Modal>
+      )}
+
+      {/* Books Modal */}
+      {openWork === "books" && (
+        <Modal title="BOOKS" onClose={() => setOpenWork(null)}>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {books.map((book) => (
+              <article
+                key={book.title}
+                className="group flex gap-4 rounded-sm border-2 border-primary bg-electric-deep p-4 transition-all hover:border-secondary hover:shadow-[6px_6px_0_0_var(--red-pop)]"
               >
-                <MessageSquare className="size-5" />
-                LET&apos;S TALK
-              </a>
+                <img
+                  src={book.cover}
+                  alt={`Cover of ${book.title}`}
+                  loading="lazy"
+                  width={1024}
+                  height={1024}
+                  className="size-28 shrink-0 rounded-sm border-2 border-primary object-cover transition-colors group-hover:border-secondary sm:size-32"
+                />
+                <div className="min-w-0">
+                  <h3 className="font-display text-base leading-tight text-secondary sm:text-lg">
+                    {book.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-snug text-muted-foreground">
+                    {book.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Modal>
+      )}
+
+      {/* Newsletters Modal */}
+      {openWork === "newsletters" && (
+        <Modal title="NEWSLETTERS" onClose={() => setOpenWork(null)}>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {writings.map((w) => (
               <a
-                href={CALENDLY_URL}
+                key={w.platform}
+                href={w.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-secondary bg-secondary px-5 py-3 font-display text-sm tracking-widest text-secondary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--red-pop)]"
+                className="group flex flex-col rounded-sm border-2 border-primary bg-electric-deep p-5 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[6px_6px_0_0_var(--yellow-pop)]"
               >
-                <CalendarDays className="size-5" />
-                SCHEDULE A CALL
+                <div className="flex items-center justify-between">
+                  <span className="font-display text-xs tracking-widest text-primary transition-colors group-hover:text-secondary">
+                    {w.platform}
+                  </span>
+                  <ArrowUpRight className="size-5 text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </div>
+                <h3 className="mt-3 font-display text-lg leading-tight text-foreground">
+                  {w.name}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground">{w.blurb}</p>
               </a>
-            </div>
-
+            ))}
           </div>
-        </div>
+        </Modal>
+      )}
+
+      {/* Projects Modal */}
+      {openWork === "projects" && (
+        <Modal title="PROJECTS" onClose={() => setOpenWork(null)}>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {wares.map((ware) => (
+              <article
+                key={ware.title}
+                className="group rounded-sm border-2 border-primary bg-electric-deep p-5 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[6px_6px_0_0_var(--red-pop)]"
+              >
+                <h3 className="font-display text-xl leading-tight text-secondary">
+                  {ware.title}
+                </h3>
+                <p className="mt-3 text-sm leading-snug text-muted-foreground">
+                  {ware.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Modal>
       )}
     </main>
   );
