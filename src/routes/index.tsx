@@ -8,6 +8,8 @@ import {
   Package,
   ArrowUpRight,
   X,
+  MessageSquare,
+  CalendarDays,
 } from "lucide-react";
 
 import bookDeath from "@/assets/book-death.jpg";
@@ -100,6 +102,35 @@ const wares = [
   },
 ];
 
+// Easy to swap: update this URL with the real Calendly link.
+const CALENDLY_URL = "https://calendly.com/hjeanbaptiste";
+
+const marqueeItems = ["Strategy", "Storytelling", "Prototyping", "Creative Direction"];
+
+const focusAreas = [
+  {
+    title: "FOUNDER STRATEGY",
+    accent: "bg-[radial-gradient(circle_at_20%_20%,var(--red-pop),transparent_55%),radial-gradient(circle_at_80%_70%,var(--yellow-pop),transparent_50%),var(--electric-deep)]",
+    body: "Most founders aren't missing an idea. They've got something real, just buried under what they think they're supposed to say. I help dig it out. I spent my Army years as a cryptologic linguist doing signals intelligence, listening through noise for the thing that matters. Strategy works the same way: find the objective, test what holds, debrief honestly. Part tactics, part story.",
+  },
+  {
+    title: "BRAND DEVELOPMENT",
+    accent: "bg-[radial-gradient(circle_at_75%_25%,var(--yellow-pop),transparent_55%),radial-gradient(circle_at_25%_80%,var(--red-pop),transparent_50%),var(--electric-deep)]",
+    body: "The story's usually already there, sitting in what you've built and how you treat people. I just notice it and give it shape. I care about intentionality, about how people actually exist inside their own worlds. A brand done right is that world made legible. I picked up a version of this in bars and restaurants, watching how a menu's design or a room's feel quietly shaped what people chose.",
+  },
+  {
+    title: "APP & WEBSITE DEVELOPMENT",
+    accent: "bg-[linear-gradient(115deg,var(--red-pop)_0%,transparent_45%),linear-gradient(285deg,var(--yellow-pop)_0%,transparent_45%),var(--electric-deep)]",
+    body: "I prototype fast, so we're reacting to something real in days instead of talking in the abstract for weeks. I run it like a sprint: build, test, adjust. The Army organization in me, planning and debriefing each round. When the details need nailing down, I bring in partner designers and developers. Cuts cost, cuts time, smooths the stretch between idea and finished thing.",
+  },
+  {
+    title: "CREATIVE DIRECTION",
+    accent: "bg-[radial-gradient(circle_at_50%_15%,var(--yellow-pop),transparent_45%),radial-gradient(circle_at_15%_85%,var(--red-pop),transparent_45%),radial-gradient(circle_at_85%_85%,var(--red-bright),transparent_45%),var(--electric-deep)]",
+    body: "Making sure everything you put out actually says what you mean. Typography is an argument. Color takes a position. Ten years of writing taught me form and feeling can't be separated. The hospitality instinct does the rest: reading a room, knowing how aesthetics pull people in and hold them there.",
+  },
+];
+
+
 function RedSquare() {
   return (
     <span className="inline-block size-5 shrink-0 bg-primary shadow-[3px_3px_0_0_var(--electric-deep)] sm:size-6" />
@@ -190,10 +221,75 @@ function Index() {
           </p>
         </header>
 
+        {/* Positioning line */}
+        <section className="mb-12 sm:mb-16">
+          <h2 className="max-w-4xl text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
+            Helping founders shape ideas into{" "}
+            <span className="text-primary">brands</span>,{" "}
+            <span className="text-secondary">products</span>, and{" "}
+            <span className="text-primary">ventures</span>.
+          </h2>
+        </section>
+
+        {/* Auto-scrolling marquee */}
+        <section className="mb-16 overflow-hidden border-y-4 border-primary bg-electric-deep py-4 sm:mb-24">
+          <div className="flex w-max animate-marquee">
+            {[0, 1].map((dup) => (
+              <div key={dup} className="flex shrink-0 items-center" aria-hidden={dup === 1}>
+                {marqueeItems.map((item) => (
+                  <span key={item} className="flex items-center">
+                    <span className="px-6 font-display text-xl tracking-tight text-secondary sm:text-3xl">
+                      {item}
+                    </span>
+                    <span className="size-3 shrink-0 rotate-45 bg-primary sm:size-4" />
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Current Focus */}
+        <section className="mb-16 sm:mb-24">
+          <div className="mb-8 flex items-center gap-4">
+            <RedSquare />
+            <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
+              Current Focus
+            </h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {focusAreas.map((area) => (
+              <article
+                key={area.title}
+                className="group flex flex-col overflow-hidden rounded-sm border-4 border-primary bg-electric-deep transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)]"
+              >
+                <div className={`h-28 w-full ${area.accent}`} aria-hidden="true" />
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <h3 className="font-display text-xl leading-tight text-secondary sm:text-2xl">
+                    {area.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    {area.body}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Personal Work */}
+        <div className="mb-8 flex items-center gap-4">
+          <span className="inline-block size-5 shrink-0 bg-secondary shadow-[3px_3px_0_0_var(--electric-deep)] sm:size-6" />
+          <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
+            Personal Work
+          </h2>
+        </div>
+
         {/* Accordions */}
         <section>
           <AccordionSection
             id="works"
+
             title="WORKS"
             icon={<BookOpen className="size-6 sm:size-7" />}
             open={openSection === "works"}
@@ -313,11 +409,29 @@ function Index() {
               <h2 className="text-3xl tracking-tight text-foreground">ABOUT ME</h2>
             </div>
             <p className="text-lg leading-relaxed text-foreground">
-              Former cryptologic linguist turned writer and creative
-              strategist.&nbsp;I work with individuals and brands to brainstorm,
-              create, and test out fresh ideas for their worlds. Let’s collab
-              and turn your concept into reality.
+              Former cryptologic linguist specialized in Arabic and GSM/CDMA
+              technologies. Now writing and collaborating with individuals
+              interested in building creative ways to exist within their worlds.
             </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <a
+                href="mailto:hello@hjeanbaptiste.com"
+                className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-primary bg-primary px-5 py-3 font-display text-sm tracking-widest text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--yellow-pop)]"
+              >
+                <MessageSquare className="size-5" />
+                LET&apos;S TALK
+              </a>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-secondary bg-secondary px-5 py-3 font-display text-sm tracking-widest text-secondary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--red-pop)]"
+              >
+                <CalendarDays className="size-5" />
+                SCHEDULE A CALL
+              </a>
+            </div>
+
           </div>
         </div>
       )}
