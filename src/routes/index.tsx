@@ -186,7 +186,7 @@ function Index() {
             </button>
           </div>
           <p className="mt-6 inline-block bg-secondary px-3 py-1 font-display text-sm tracking-[0.2em] text-secondary-foreground sm:text-xl">
-            BUILDING · DWELLING · THINKING
+            CREATIVE PARTNER
           </p>
         </header>
 
