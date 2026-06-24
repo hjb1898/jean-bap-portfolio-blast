@@ -219,10 +219,75 @@ function Index() {
           </p>
         </header>
 
+        {/* Positioning line */}
+        <section className="mb-12 sm:mb-16">
+          <h2 className="max-w-4xl text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
+            Helping founders shape ideas into{" "}
+            <span className="text-primary">brands</span>,{" "}
+            <span className="text-secondary">products</span>, and{" "}
+            <span className="text-primary">ventures</span>.
+          </h2>
+        </section>
+
+        {/* Auto-scrolling marquee */}
+        <section className="mb-16 overflow-hidden border-y-4 border-primary bg-electric-deep py-4 sm:mb-24">
+          <div className="flex w-max animate-marquee">
+            {[0, 1].map((dup) => (
+              <div key={dup} className="flex shrink-0 items-center" aria-hidden={dup === 1}>
+                {marqueeItems.map((item) => (
+                  <span key={item} className="flex items-center">
+                    <span className="px-6 font-display text-xl tracking-tight text-secondary sm:text-3xl">
+                      {item}
+                    </span>
+                    <span className="size-3 shrink-0 rotate-45 bg-primary sm:size-4" />
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Current Focus */}
+        <section className="mb-16 sm:mb-24">
+          <div className="mb-8 flex items-center gap-4">
+            <RedSquare />
+            <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
+              Current Focus
+            </h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {focusAreas.map((area) => (
+              <article
+                key={area.title}
+                className="group flex flex-col overflow-hidden rounded-sm border-4 border-primary bg-electric-deep transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)]"
+              >
+                <div className={`h-28 w-full ${area.accent}`} aria-hidden="true" />
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <h3 className="font-display text-xl leading-tight text-secondary sm:text-2xl">
+                    {area.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    {area.body}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Personal Work */}
+        <div className="mb-8 flex items-center gap-4">
+          <span className="inline-block size-5 shrink-0 bg-secondary shadow-[3px_3px_0_0_var(--electric-deep)] sm:size-6" />
+          <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
+            Personal Work
+          </h2>
+        </div>
+
         {/* Accordions */}
         <section>
           <AccordionSection
             id="works"
+
             title="WORKS"
             icon={<BookOpen className="size-6 sm:size-7" />}
             open={openSection === "works"}
