@@ -407,11 +407,29 @@ function Index() {
               <h2 className="text-3xl tracking-tight text-foreground">ABOUT ME</h2>
             </div>
             <p className="text-lg leading-relaxed text-foreground">
-              Former cryptologic linguist turned writer and creative
-              strategist.&nbsp;I work with individuals and brands to brainstorm,
-              create, and test out fresh ideas for their worlds. Let’s collab
-              and turn your concept into reality.
+              Former cryptologic linguist specialized in Arabic and GSM/CDMA
+              technologies. Now writing and collaborating with individuals
+              interested in building creative ways to exist within their worlds.
             </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <a
+                href="mailto:hello@hjeanbaptiste.com"
+                className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-primary bg-primary px-5 py-3 font-display text-sm tracking-widest text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--yellow-pop)]"
+              >
+                <MessageSquare className="size-5" />
+                LET&apos;S TALK
+              </a>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-secondary bg-secondary px-5 py-3 font-display text-sm tracking-widest text-secondary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--red-pop)]"
+              >
+                <CalendarDays className="size-5" />
+                SCHEDULE A CALL
+              </a>
+            </div>
+
           </div>
         </div>
       )}
