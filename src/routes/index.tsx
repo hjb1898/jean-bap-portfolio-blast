@@ -434,34 +434,16 @@ function Index() {
           </div>
         </section>
 
-        {/* Current Focus */}
-        <section className="mb-12 sm:mb-16">
-          <div className="mb-8 flex items-center gap-4">
+        {/* Current Focus — extra top spacing so the marquee and the fade
+            stack never animate within the same viewport. */}
+        <section className="mb-12 pt-20 sm:mb-16 sm:pt-40">
+          <div className="mb-10 flex items-center gap-4 sm:mb-14">
             <RedSquare />
             <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
               Current Focus
             </h2>
           </div>
-          <div className="flex flex-col gap-5">
-            {focusAreas.map(({ title, body, Icon }) => (
-              <article
-                key={title}
-                className="group flex flex-col gap-5 rounded-sm border-4 border-primary bg-electric-deep p-5 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)] sm:flex-row sm:items-start sm:gap-7 sm:p-7"
-              >
-                <div className="flex items-center gap-4 sm:w-64 sm:shrink-0 sm:flex-col sm:items-start">
-                  <span className="grid size-16 shrink-0 place-items-center rounded-sm border-4 border-secondary bg-primary text-primary-foreground transition-colors group-hover:bg-secondary group-hover:text-secondary-foreground sm:size-20">
-                    <Icon className="size-8 sm:size-10" />
-                  </span>
-                  <h3 className="whitespace-pre-line font-display text-xl leading-tight text-secondary sm:text-2xl">
-                    {title}
-                  </h3>
-                </div>
-                <p className="flex-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  {body}
-                </p>
-              </article>
-            ))}
-          </div>
+          <FocusFadeStack />
         </section>
 
         {/* CTA below focus */}
