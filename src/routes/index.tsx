@@ -302,7 +302,7 @@ function Index() {
               >
                 {marqueeItems.map((item) => (
                   <span key={item} className="flex items-center">
-                    <span className="px-6 font-display text-xl tracking-tight text-secondary sm:text-3xl">
+                    <span className="px-6 font-display text-xl tracking-tight text-foreground sm:text-3xl">
                       {item}
                     </span>
                     <span className="size-3 shrink-0 rotate-45 bg-primary sm:size-4" />
