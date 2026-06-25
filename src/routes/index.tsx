@@ -311,10 +311,11 @@ function FocusFadeStack() {
                   position: "sticky",
                   top: STACK.TOP_BASE + i * STACK.STACK_OFFSET,
                   zIndex: i + 1,
-                  // Scroll runway between cards so each one rests and stays
-                  // active before the next rises up to take over.
-                  marginBottom:
-                    i < focusAreas.length - 1 ? STACK.RUNWAY : undefined,
+                  // Scroll runway after each card so it rests and stays
+                  // active before the next rises up to take over. The trailing
+                  // runway on the last card lets it settle and adds breathing
+                  // room before the CTA.
+                  marginBottom: STACK.RUNWAY,
                   transformOrigin: "center top",
                   willChange: "opacity, transform",
                 }
