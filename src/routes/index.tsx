@@ -112,7 +112,7 @@ const marqueeItems = ["Market Research", "Storytelling", "Prototyping", "Concept
 
 const focusAreas = [
   {
-    title: "CONCEPTUAL STRATEGY",
+    title: "IDEATION\n& STRATEGY",
     Icon: Target,
     body: "Founders aren't missing an idea. They've got something real, just buried under what they think they're supposed to say. I help dig it out. I spent my Army years as a cryptologic linguist doing signals intelligence, listening through noise for the thing that matters. Strategy works the same way: find the objective, test what holds, debrief honestly. Part tactics, part story.",
   },
@@ -331,7 +331,7 @@ function Index() {
                   <span className="grid size-16 shrink-0 place-items-center rounded-sm border-4 border-secondary bg-primary text-primary-foreground transition-colors group-hover:bg-secondary group-hover:text-secondary-foreground sm:size-20">
                     <Icon className="size-8 sm:size-10" />
                   </span>
-                  <h3 className="font-display text-xl leading-tight text-secondary sm:text-2xl">
+                  <h3 className="whitespace-pre-line font-display text-xl leading-tight text-secondary sm:text-2xl">
                     {title}
                   </h3>
                 </div>
