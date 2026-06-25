@@ -286,7 +286,7 @@ function Index() {
             Helping founders shape ideas into{" "}
             <span className="text-foreground">brands</span>,{" "}
             <span className="text-foreground">products</span>, and{" "}
-            <span className="text-foreground">ventures</span>.
+            <span className="text-foreground">adventures</span>.
           </h2>
         </section>
 
