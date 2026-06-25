@@ -112,24 +112,28 @@ const marqueeItems = ["Market Research", "Storytelling", "Prototyping", "Concept
 
 const focusAreas = [
   {
+    step: "01",
     title: "IDEATION\n& STRATEGY",
     Icon: Target,
-    body: "Founders aren't missing an idea. They've got something real, just buried under what they think they're supposed to say. I help dig it out. I spent my Army years as a cryptologic linguist doing signals intelligence, listening through noise for the thing that matters. Strategy works the same way: find the objective, test what holds, debrief honestly. Part tactics, part story.",
+    body: "We start with a conversation. Sometimes you arrive with a fully-formed idea and we pressure-test it; sometimes it's still a hunch and we map it out together. Either way the goal is the same: find the real objective underneath everything you think you're supposed to say. I spent my Army years in signals intelligence, listening through noise for the thing that actually matters. This is that. Once we know what we're really building, every decision after gets easier.",
   },
   {
+    step: "02",
     title: "BRAND DEVELOPMENT",
     Icon: Fingerprint,
-    body: "The story's usually already there, sitting in what you've built and how you treat people. I just notice it and give it shape. I care about intentionality, about how people actually exist inside their own worlds. A brand done right is that world made legible. I picked up a version of this in bars and restaurants, watching how a menu's design or a room's feel quietly shaped what people chose.",
+    body: "With the direction clear, we shape how it shows up in the world. The story is usually already there, sitting in what you've built and how you treat people — I just help you see it and give it form. This isn't a logo handed down from on high. It's your world made legible, so the people you want to reach actually feel it. We build it together, because nobody knows your thing better than you do.",
   },
   {
+    step: "03",
     title: "APP & WEBSITE DEVELOPMENT",
     Icon: Code,
-    body: "I prototype fast, so we're reacting to something real in days instead of talking in the abstract for weeks. I run it like a sprint: build, test, adjust. The Army organization in me, planning and debriefing each round. When the details need nailing down, I bring in partner designers and developers. Cuts cost, cuts time, smooths the stretch between idea and finished thing.",
+    body: "Then we make it real. I prototype fast, so within days you're reacting to something you can actually click instead of imagining it from a slide. We run it in sprints: build, test, adjust, repeat. When the details need nailing down, I bring in trusted designers and developers so nothing gets dropped. You stay in the loop the whole way — this is your thing, I'm just helping you build it well.",
   },
   {
+    step: "04",
     title: "CREATIVE DIRECTION",
     Icon: Compass,
-    body: "Making sure everything you put out actually says what you mean. Typography is an argument. Color takes a position. Ten years of writing taught me form and feeling can't be separated. The hospitality instinct does the rest: reading a room, knowing how aesthetics pull people in and hold them there.",
+    body: "Through all of it, I'm making sure everything you put out actually says what you mean. Typography is an argument. Color takes a position. Ten years of writing taught me form and feeling can't be separated, and years in bars and restaurants taught me how aesthetics pull people in and make them want to stay. By the end you don't just have something launched — you have direction, confidence, and the momentum to keep going on your own.",
   },
 ];
 
