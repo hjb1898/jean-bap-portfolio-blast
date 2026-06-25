@@ -220,7 +220,126 @@ const workTiles: { id: WorkSection; label: string; icon: React.ReactNode }[] = [
   { id: "projects", label: "Projects", icon: <Package className="size-8 sm:size-10" /> },
 ];
 
-function Index() {
+/**
+ * Choreography constants for the scroll-driven fade stack.
+ * Tweak these to fine-tune the effect after seeing it live.
+ */
+const STACK = {
+  TOP_BASE: 96, // px — where the active card rests below the viewport top
+  STACK_OFFSET: 14, // px — how far each earlier card peeks above the next
+  FADE_DISTANCE: 280, // px of scroll over which a card hands off to the next
+  OPACITY_FLOOR: 0.25, // dimmed (superseded) card opacity
+  SCALE_FLOOR: 0.95, // dimmed (superseded) card scale
+};
+
+function FocusFadeStack() {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [stacked, setStacked] = useState(false);
+
+  // Disable stacking on mobile (<=768px) and for reduced-motion users.
+  useEffect(() => {
+    const mqMobile = window.matchMedia("(max-width: 768px)");
+    const mqReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const evaluate = () => setStacked(!mqMobile.matches && !mqReduce.matches);
+    evaluate();
+    mqMobile.addEventListener("change", evaluate);
+    mqReduce.addEventListener("change", evaluate);
+    return () => {
+      mqMobile.removeEventListener("change", evaluate);
+      mqReduce.removeEventListener("change", evaluate);
+    };
+  }, []);
+
+  // Drive opacity/scale from scroll position, smoothed via rAF.
+  useEffect(() => {
+    const cards = cardRefs.current;
+    if (!stacked) {
+      cards.forEach((el) => {
+        if (el) {
+          el.style.opacity = "";
+          el.style.transform = "";
+        }
+      });
+      return;
+    }
+
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      for (let i = 0; i < cards.length; i++) {
+        const el = cards[i];
+        if (!el) continue;
+        let p = 0; // 0 = fully active, 1 = fully superseded
+        const next = cards[i + 1];
+        if (next) {
+          const nextTop = next.getBoundingClientRect().top;
+          const nextRest = STACK.TOP_BASE + (i + 1) * STACK.STACK_OFFSET;
+          p = (nextRest + STACK.FADE_DISTANCE - nextTop) / STACK.FADE_DISTANCE;
+          p = Math.min(1, Math.max(0, p));
+        }
+        const opacity = 1 - p * (1 - STACK.OPACITY_FLOOR);
+        const scale = 1 - p * (1 - STACK.SCALE_FLOOR);
+        el.style.opacity = String(opacity);
+        el.style.transform = `scale(${scale})`;
+      }
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    update();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [stacked]);
+
+  return (
+    <div className="flex flex-col gap-5">
+      {focusAreas.map(({ step, title, body, Icon }, i) => (
+        <div
+          key={step}
+          ref={(el) => {
+            cardRefs.current[i] = el;
+          }}
+          style={
+            stacked
+              ? {
+                  position: "sticky",
+                  top: STACK.TOP_BASE + i * STACK.STACK_OFFSET,
+                  zIndex: i + 1,
+                  transformOrigin: "center top",
+                  willChange: "opacity, transform",
+                }
+              : undefined
+          }
+        >
+          <article className="group flex flex-col gap-5 rounded-sm border-4 border-primary bg-electric-deep p-5 transition-colors hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)] sm:flex-row sm:items-start sm:gap-7 sm:p-7">
+            <div className="flex items-center gap-4 sm:w-64 sm:shrink-0 sm:flex-col sm:items-start">
+              <div className="flex items-center gap-4 sm:w-full sm:justify-between">
+                <span className="grid size-16 shrink-0 place-items-center rounded-sm border-4 border-secondary bg-primary text-primary-foreground transition-colors group-hover:bg-secondary group-hover:text-secondary-foreground sm:size-20">
+                  <Icon className="size-8 sm:size-10" />
+                </span>
+                <span className="font-display text-4xl leading-none tracking-tighter text-yellow-pop sm:text-5xl">
+                  {step}
+                </span>
+              </div>
+              <h3 className="whitespace-pre-line font-display text-xl leading-tight text-secondary sm:text-2xl">
+                {title}
+              </h3>
+            </div>
+            <p className="flex-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              {body}
+            </p>
+          </article>
+        </div>
+      ))}
+    </div>
+  );
+}
+
   const [aboutOpen, setAboutOpen] = useState(false);
   const [openWork, setOpenWork] = useState<WorkSection | null>(null);
 
