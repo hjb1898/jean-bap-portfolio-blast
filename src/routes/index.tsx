@@ -297,7 +297,7 @@ function FocusFadeStack() {
   }, [stacked]);
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className={stacked ? "" : "flex flex-col gap-5"}>
       {focusAreas.map(({ step, title, body, Icon }, i) => (
         <div
           key={step}
@@ -310,6 +310,10 @@ function FocusFadeStack() {
                   position: "sticky",
                   top: STACK.TOP_BASE + i * STACK.STACK_OFFSET,
                   zIndex: i + 1,
+                  // Scroll runway between cards so each one rests and stays
+                  // active before the next rises up to take over.
+                  marginBottom:
+                    i < focusAreas.length - 1 ? STACK.RUNWAY : undefined,
                   transformOrigin: "center top",
                   willChange: "opacity, transform",
                 }
