@@ -112,9 +112,9 @@ const marqueeItems = ["Market Research", "Storytelling", "Prototyping", "Concept
 
 const focusAreas = [
   {
-    title: "FOUNDER STRATEGY",
+    title: "CONCEPTUAL STRATEGY",
     Icon: Target,
-    body: "Most founders aren't missing an idea. They've got something real, just buried under what they think they're supposed to say. I help dig it out. I spent my Army years as a cryptologic linguist doing signals intelligence, listening through noise for the thing that matters. Strategy works the same way: find the objective, test what holds, debrief honestly. Part tactics, part story.",
+    body: "Founders aren't missing an idea. They've got something real, just buried under what they think they're supposed to say. I help dig it out. I spent my Army years as a cryptologic linguist doing signals intelligence, listening through noise for the thing that matters. Strategy works the same way: find the objective, test what holds, debrief honestly. Part tactics, part story.",
   },
   {
     title: "BRAND DEVELOPMENT",
