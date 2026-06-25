@@ -230,6 +230,7 @@ const STACK = {
   FADE_DISTANCE: 280, // px of scroll over which a card hands off to the next
   OPACITY_FLOOR: 0.25, // dimmed (superseded) card opacity
   SCALE_FLOOR: 0.95, // dimmed (superseded) card scale
+  RUNWAY: "55vh", // scroll runway between cards before the next takes over
 };
 
 function FocusFadeStack() {
