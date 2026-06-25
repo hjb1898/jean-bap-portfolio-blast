@@ -340,6 +340,7 @@ function FocusFadeStack() {
   );
 }
 
+function Index() {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [openWork, setOpenWork] = useState<WorkSection | null>(null);
 
