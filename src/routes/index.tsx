@@ -282,11 +282,8 @@ function Index() {
 
         {/* Positioning line */}
         <section className="mb-12 sm:mb-16">
-          <h2 className="max-w-4xl text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
-            Helping founders shape ideas into{" "}
-            <span className="text-foreground">brands</span>,{" "}
-            <span className="text-foreground">products</span>, and{" "}
-            <span className="text-foreground">ad-ventures</span>.
+          <h2 className="max-w-4xl whitespace-pre-line text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
+            Helping founders shape{"\n"}ideas into&nbsp;adventures.
           </h2>
         </section>
 
