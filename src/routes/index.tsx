@@ -108,7 +108,7 @@ const wares = [
 // Easy to swap: update this URL with the real Calendly link.
 const CALENDLY_URL = "https://calendly.com/hjeanbaptiste";
 
-const marqueeItems = ["Market Research", "Storytelling", "Prototyping", "Creative Direction"];
+const marqueeItems = ["Market Research", "Storytelling", "Prototyping", "Conceptual Engineering"];
 
 const focusAreas = [
   {
