@@ -284,9 +284,9 @@ function Index() {
         <section className="mb-12 sm:mb-16">
           <h2 className="max-w-4xl text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
             Helping founders shape ideas into{" "}
-            <span className="text-primary">brands</span>,{" "}
-            <span className="text-secondary">products</span>, and{" "}
-            <span className="text-primary">ventures</span>.
+            <span className="text-foreground">brands</span>,{" "}
+            <span className="text-foreground">products</span>, and{" "}
+            <span className="text-foreground">ventures</span>.
           </h2>
         </section>
 
@@ -302,7 +302,7 @@ function Index() {
               >
                 {marqueeItems.map((item) => (
                   <span key={item} className="flex items-center">
-                    <span className="px-6 font-display text-xl tracking-tight text-secondary sm:text-3xl">
+                    <span className="px-6 font-display text-xl tracking-tight text-foreground sm:text-3xl">
                       {item}
                     </span>
                     <span className="size-3 shrink-0 rotate-45 bg-primary sm:size-4" />
