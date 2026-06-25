@@ -112,25 +112,21 @@ const marqueeItems = ["Market Research", "Storytelling", "Prototyping", "Concept
 
 const focusAreas = [
   {
-    step: "01",
     title: "IDEATION\n& STRATEGY",
     Icon: Target,
     body: "We start with a conversation. Sometimes you arrive with a fully-formed idea and we pressure-test it; sometimes it's still a hunch and we map it out together. Either way the goal is the same: find the real objective underneath everything you think you're supposed to say. I spent my Army years in signals intelligence, listening through noise for the thing that actually matters. This is that. Once we know what we're really building, every decision after gets easier.",
   },
   {
-    step: "02",
     title: "BRAND DEVELOPMENT",
     Icon: Fingerprint,
     body: "With the direction clear, we shape how it shows up in the world. The story is usually already there, sitting in what you've built and how you treat people — I just help you see it and give it form. This isn't a logo handed down from on high. It's your world made legible, so the people you want to reach actually feel it. We build it together, because nobody knows your thing better than you do.",
   },
   {
-    step: "03",
     title: "APP & WEBSITE DEVELOPMENT",
     Icon: Code,
-    body: "Then we make it real. I prototype fast, so within days you're reacting to something you can actually click instead of imagining it from a slide. We run it in sprints: build, test, adjust, repeat. When the details need nailing down, I bring in trusted designers and developers so nothing gets dropped. You stay in the loop the whole way — this is your thing, I'm just helping you build it well.",
+    body: "Here we make your idea real. I prototype fast, so within days you're reacting to something you can actually click instead of imagining it from a slide. We run it in sprints: build, test, adjust, repeat. When the details need nailing down, I bring in trusted designers and developers so nothing gets dropped. You stay in the loop the whole way — this is your thing, I'm just helping you build it well.",
   },
   {
-    step: "04",
     title: "CREATIVE DIRECTION",
     Icon: Compass,
     body: "Through all of it, I'm making sure everything you put out actually says what you mean. Typography is an argument. Color takes a position. Ten years of writing taught me form and feeling can't be separated, and years in bars and restaurants taught me how aesthetics pull people in and make them want to stay. By the end you don't just have something launched — you have direction, confidence, and the momentum to keep going on your own.",
@@ -220,132 +216,6 @@ const workTiles: { id: WorkSection; label: string; icon: React.ReactNode }[] = [
   { id: "projects", label: "Projects", icon: <Package className="size-8 sm:size-10" /> },
 ];
 
-/**
- * Choreography constants for the scroll-driven fade stack.
- * Tweak these to fine-tune the effect after seeing it live.
- */
-const STACK = {
-  TOP_BASE: 96, // px — where the active card rests below the viewport top
-  STACK_OFFSET: 14, // px — how far each earlier card peeks above the next
-  FADE_DISTANCE: 280, // px of scroll over which a card hands off to the next
-  OPACITY_FLOOR: 0.25, // dimmed (superseded) card opacity
-  SCALE_FLOOR: 0.95, // dimmed (superseded) card scale
-  RUNWAY: "55vh", // scroll runway between cards before the next takes over
-};
-
-function FocusFadeStack() {
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [stacked, setStacked] = useState(false);
-
-  // Disable stacking on mobile (<=768px) and for reduced-motion users.
-  useEffect(() => {
-    const mqMobile = window.matchMedia("(max-width: 768px)");
-    const mqReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const evaluate = () => setStacked(!mqMobile.matches && !mqReduce.matches);
-    evaluate();
-    mqMobile.addEventListener("change", evaluate);
-    mqReduce.addEventListener("change", evaluate);
-    return () => {
-      mqMobile.removeEventListener("change", evaluate);
-      mqReduce.removeEventListener("change", evaluate);
-    };
-  }, []);
-
-  // Drive opacity/scale from scroll position, smoothed via rAF.
-  useEffect(() => {
-    const cards = cardRefs.current;
-    if (!stacked) {
-      cards.forEach((el) => {
-        if (el) {
-          el.style.opacity = "";
-          el.style.transform = "";
-        }
-      });
-      return;
-    }
-
-    let raf = 0;
-    const update = () => {
-      raf = 0;
-      for (let i = 0; i < cards.length; i++) {
-        const el = cards[i];
-        if (!el) continue;
-        let p = 0; // 0 = fully active, 1 = fully superseded
-        const next = cards[i + 1];
-        if (next) {
-          const nextTop = next.getBoundingClientRect().top;
-          const nextRest = STACK.TOP_BASE + (i + 1) * STACK.STACK_OFFSET;
-          p = (nextRest + STACK.FADE_DISTANCE - nextTop) / STACK.FADE_DISTANCE;
-          p = Math.min(1, Math.max(0, p));
-        }
-        const opacity = 1 - p * (1 - STACK.OPACITY_FLOOR);
-        const scale = 1 - p * (1 - STACK.SCALE_FLOOR);
-        el.style.opacity = String(opacity);
-        el.style.transform = `scale(${scale})`;
-      }
-    };
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(update);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
-    update();
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
-  }, [stacked]);
-
-  return (
-    <div className={stacked ? "" : "flex flex-col gap-5"}>
-      {focusAreas.map(({ step, title, body, Icon }, i) => (
-        <div
-          key={step}
-          ref={(el) => {
-            cardRefs.current[i] = el;
-          }}
-          style={
-            stacked
-              ? {
-                  position: "sticky",
-                  top: STACK.TOP_BASE + i * STACK.STACK_OFFSET,
-                  zIndex: i + 1,
-                  // Scroll runway after each card so it rests and stays
-                  // active before the next rises up to take over. The trailing
-                  // runway on the last card lets it settle and adds breathing
-                  // room before the CTA.
-                  marginBottom: STACK.RUNWAY,
-                  transformOrigin: "center top",
-                  willChange: "opacity, transform",
-                }
-              : undefined
-          }
-        >
-          <article className="group flex flex-col gap-5 rounded-sm border-4 border-primary bg-electric-deep p-5 transition-colors hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)] sm:flex-row sm:items-start sm:gap-7 sm:p-7">
-            <div className="flex items-center gap-4 sm:w-64 sm:shrink-0 sm:flex-col sm:items-start">
-              <div className="flex items-center gap-4 sm:w-full sm:justify-between">
-                <span className="grid size-16 shrink-0 place-items-center rounded-sm border-4 border-secondary bg-primary text-primary-foreground transition-colors group-hover:bg-secondary group-hover:text-secondary-foreground sm:size-20">
-                  <Icon className="size-8 sm:size-10" />
-                </span>
-                <span className="font-display text-4xl leading-none tracking-tighter text-yellow-pop sm:text-5xl">
-                  {step}
-                </span>
-              </div>
-              <h3 className="whitespace-pre-line font-display text-xl leading-tight text-secondary sm:text-2xl">
-                {title}
-              </h3>
-            </div>
-            <p className="flex-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              {body}
-            </p>
-          </article>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function Index() {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [openWork, setOpenWork] = useState<WorkSection | null>(null);
@@ -413,7 +283,7 @@ function Index() {
         {/* Positioning line */}
         <section className="mb-12 sm:mb-16">
           <h2 className="max-w-4xl whitespace-pre-line text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
-            Helping founders shape{"\n"}ideas into&nbsp;adventures.
+            {"Helping founders shape\nideas into adventures."}
           </h2>
         </section>
 
@@ -440,16 +310,34 @@ function Index() {
           </div>
         </section>
 
-        {/* Current Focus — extra top spacing so the marquee and the fade
-            stack never animate within the same viewport. */}
-        <section className="mb-12 pt-20 sm:mb-16 sm:pt-40">
-          <div className="mb-10 flex items-center gap-4 sm:mb-14">
+        {/* Current Focus */}
+        <section className="mb-12 sm:mb-16">
+          <div className="mb-8 flex items-center gap-4">
             <RedSquare />
             <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
               Current Focus
             </h2>
           </div>
-          <FocusFadeStack />
+          <div className="flex flex-col gap-5">
+            {focusAreas.map(({ title, body, Icon }) => (
+              <article
+                key={title}
+                className="group flex flex-col gap-5 rounded-sm border-4 border-primary bg-electric-deep p-5 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)] sm:flex-row sm:items-start sm:gap-7 sm:p-7"
+              >
+                <div className="flex items-center gap-4 sm:w-64 sm:shrink-0 sm:flex-col sm:items-start">
+                  <span className="grid size-16 shrink-0 place-items-center rounded-sm border-4 border-secondary bg-primary text-primary-foreground transition-colors group-hover:bg-secondary group-hover:text-secondary-foreground sm:size-20">
+                    <Icon className="size-8 sm:size-10" />
+                  </span>
+                  <h3 className="whitespace-pre-line font-display text-xl leading-tight text-secondary sm:text-2xl">
+                    {title}
+                  </h3>
+                </div>
+                <p className="flex-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  {body}
+                </p>
+              </article>
+            ))}
+          </div>
         </section>
 
         {/* CTA below focus */}
