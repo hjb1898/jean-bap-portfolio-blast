@@ -106,7 +106,7 @@ const wares = [
 ];
 
 // Easy to swap: update this URL with the real Calendly link.
-const CALENDLY_URL = "https://calendly.com/hjeanbaptiste";
+const CALENDLY_URL = "https://calendly.com/jbography";
 
 const marqueeItems = ["Market Research", "Storytelling", "Prototyping", "Conceptual Engineering"];
 
@@ -114,22 +114,22 @@ const focusAreas = [
   {
     title: "IDEATION\n& STRATEGY",
     Icon: Target,
-    body: "We start with a conversation. Sometimes you arrive with a fully-formed idea and we pressure-test it; sometimes it's still a hunch and we map it out together. Either way the goal is the same: find the real objective underneath everything you think you're supposed to say. I spent my Army years in signals intelligence, listening through noise for the thing that actually matters. This is that. Once we know what we're really building, every decision after gets easier.",
+    body: "We start with a bit of socratic dialogue. Maybe we meet initially and you've got a fully-formed idea and we pressure-test it; or maybe it's still just a hunch that you've been pondering a while so we articulate it and walk through the logic of it together. Either way, we map out the terrain, root out any potential problems, find the objective no one else is shooting for, and discover opportunities for growth.",
   },
   {
     title: "BRAND DEVELOPMENT",
     Icon: Fingerprint,
-    body: "With the direction clear, we shape how it shows up in the world. The story is usually already there, sitting in what you've built and how you treat people — I just help you see it and give it form. This isn't a logo handed down from on high. It's your world made legible, so the people you want to reach actually feel it. We build it together, because nobody knows your thing better than you do.",
+    body: "With our direction clear, we can shape how your product or business shows up in the real world. Through logos, typography, and language, we'll create a coherent world of intentionality and meaning that people can immediately see, feel, and recognize as being authentically yours.",
   },
   {
     title: "APP & WEBSITE DEVELOPMENT",
     Icon: Code,
-    body: "Here we make your idea real. I prototype fast, so within days you're reacting to something you can actually click instead of imagining it from a slide. We run it in sprints: build, test, adjust, repeat. When the details need nailing down, I bring in trusted designers and developers so nothing gets dropped. You stay in the loop the whole way — this is your thing, I'm just helping you build it well.",
+    body: "Here we make your digital touch points come alive. Through rapid prototypes, we can turn the abstract into something clickable. Researching, designing, testing, and iterating. When the details need nailing down, we can bring in trusted designers and developers so every pixel and line of code is soundly put together. You stay in the loop every step of the way, providing feedback.",
   },
   {
     title: "CREATIVE DIRECTION",
     Icon: Compass,
-    body: "Through all of it, I'm making sure everything you put out actually says what you mean. Typography is an argument. Color takes a position. Ten years of writing taught me form and feeling can't be separated, and years in bars and restaurants taught me how aesthetics pull people in and make them want to stay. By the end you don't just have something launched — you have direction, confidence, and the momentum to keep going on your own.",
+    body: "With a solid brand identity in place, we translate it into visual content that builds up emotional resonance. This means storytelling that encapsulates your professional adventure, published across specific marketing channels that reach your ideal clients and customers in the compelling ways your story needs to be told.",
   },
 ];
 
@@ -143,7 +143,7 @@ function CtaButtons() {
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
       <a
-        href="mailto:hello@hjeanbaptiste.com"
+        href="mailto:howdy@jbography.com"
         className="inline-flex items-center justify-center gap-2 rounded-sm border-4 border-primary bg-primary px-5 py-3 font-display text-sm tracking-widest text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_var(--yellow-pop)]"
       >
         <MessageSquare className="size-5" />
@@ -275,15 +275,15 @@ function Index() {
               </span>
             </button>
           </div>
-          <p className="mt-6 inline-block bg-secondary px-3 py-1 font-display text-sm tracking-[0.2em] text-secondary-foreground sm:text-xl">
+          <p className="mt-6 inline-block whitespace-nowrap bg-secondary px-3 py-1 font-display text-[0.7rem] tracking-[0.2em] text-secondary-foreground sm:text-xl">
             &nbsp; CREATIVE PARTNER & STRATEGIST&nbsp;
           </p>
         </header>
 
         {/* Positioning line */}
         <section className="mb-12 sm:mb-16">
-          <h2 className="max-w-4xl whitespace-pre-line text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
-            {"Helping founders shape\nideas into adventures."}
+          <h2 className="max-w-4xl text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
+            Helping founders shape ideas into adventures.
           </h2>
         </section>
 
