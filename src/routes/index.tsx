@@ -91,7 +91,7 @@ const writings = [
 const wares = [
   {
     title: "9L",
-    description: "An apparel concept that champions ambition.",
+    description: "An apparel concept that champions the ambitious.",
   },
   {
     title: "Neurodivergent Productivity App (prototype)",
@@ -108,18 +108,18 @@ const wares = [
 // Easy to swap: update this URL with the real Calendly link.
 const CALENDLY_URL = "https://calendly.com/jbography";
 
-const marqueeItems = ["Market Research", "Storytelling", "Prototyping", "Conceptual Engineering"];
+const marqueeItems = ["Ideation", "Storytelling", "Prototyping", "Content Marketing"];
 
 const focusAreas = [
   {
     title: "IDEATION\n& STRATEGY",
     Icon: Target,
-    body: "We start with a bit of socratic dialogue. Maybe we meet initially and you've got a fully-formed idea and we pressure-test it; or maybe it's still just a hunch that you've been pondering a while so we articulate it and walk through the logic of it together. Either way, we map out the terrain, root out any potential problems, find the objective no one else is shooting for, and discover opportunities for growth.",
+    body: "We start with a bit of Socratic dialogue. Maybe we meet initially and you've got a fully-formed idea and we pressure-test it; or maybe it's still just a hunch that you've been pondering a while so we articulate it and walk through the logic of it together. Either way, we map out the terrain, root out any potential problems, find the objective no one else is shooting for, and discover opportunities for growth.",
   },
   {
     title: "BRAND DEVELOPMENT",
     Icon: Fingerprint,
-    body: "With our direction clear, we can shape how your product or business shows up in the real world. Through logos, typography, and language, we'll create a coherent world of intentionality and meaning that people can immediately see, feel, and recognize as being authentically yours.",
+    body: "With a clear direction, we can shape how your product or business shows up in the real world. Through logos, typography, and language, we'll create a coherent world of intentionality and meaning that people can immediately see, feel, and recognize as being authentically yours.",
   },
   {
     title: "APP & WEBSITE DEVELOPMENT",
