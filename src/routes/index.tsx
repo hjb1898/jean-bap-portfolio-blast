@@ -23,17 +23,17 @@ import bookOgre from "@/assets/book-ogre.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "H. Jean-Baptiste — Writer · Strategist · Builder" },
+      { title: "Creative Partner & Strategist" },
       {
         name: "description",
         content:
-          "Books, newsletters, and product concepts from H. Jean-Baptiste. Unfiltered, unapologetic energy.",
+          "Ideation, Storytelling, Prototyping, Branding, Content Marketing.",
       },
-      { property: "og:title", content: "H. Jean-Baptiste — Writer · Strategist · Builder" },
+      { property: "og:title", content: "Creative Partner & Strategist" },
       {
         property: "og:description",
         content:
-          "Books, newsletters, and product concepts from H. Jean-Baptiste.",
+          "Helping founders shape ideas into brand adventures.",
       },
     ],
   }),
