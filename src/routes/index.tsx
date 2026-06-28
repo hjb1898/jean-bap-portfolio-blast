@@ -23,18 +23,24 @@ import bookOgre from "@/assets/book-ogre.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Creative Partner & Strategist" },
+      { title: "H. Jean-Baptiste — Creative Partner & Strategist in Atlanta, GA" },
       {
         name: "description",
         content:
-          "Ideation, Storytelling, Prototyping, Branding, Content Marketing.",
+          "Atlanta-based creative partner helping founders shape ideas into brand adventures. Ideation, branding, and web/app development from H. Jean-Baptiste.",
       },
-      { property: "og:title", content: "Creative Partner & Strategist" },
+      { property: "og:title", content: "H. Jean-Baptiste — Creative Partner & Strategist" },
       {
         property: "og:description",
-        content:
-          "Helping founders shape ideas into brand adventures.",
+        content: "Helping founders shape ideas into brand adventures.",
       },
+      { property: "og:image", content: "https://jbography.com/og-image.png" },
+      { property: "og:url", content: "https://jbography.com" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "H. Jean-Baptiste — Creative Partner & Strategist" },
+      { name: "twitter:description", content: "Helping founders shape ideas into brand adventures." },
+      { name: "twitter:image", content: "https://jbography.com/og-image.png" },
     ],
   }),
   component: Index,
@@ -282,8 +288,9 @@ function Index() {
 
         {/* Positioning line */}
         <section className="mb-12 sm:mb-16">
-          <h2 className="max-w-4xl text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
-            Helping founders shape ideas into brand adventures.
+         <h2 className="max-w-4xl text-[clamp(1.75rem,5.5vw,3.5rem)] font-black leading-[0.95] tracking-tight text-foreground">
+            Helping founders shape ideas into{" "}
+            <span className="text-secondary">brand adventures.</span>
           </h2>
         </section>
 
