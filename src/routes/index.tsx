@@ -383,7 +383,8 @@ function Index() {
         </section>
 
         <footer className="mt-16 text-center font-display text-xs tracking-[0.3em] text-muted-foreground">
-          © {new Date().getFullYear()} H. JEAN-BAPTISTE
+          <div>© {new Date().getFullYear()} H. JEAN-BAPTISTE</div>
+          <div className="mt-2">ATLANTA, GA</div>
         </footer>
       </div>
 
