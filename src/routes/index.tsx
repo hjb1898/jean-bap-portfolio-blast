@@ -402,7 +402,7 @@ function Index() {
             a mad world we live in and collaborating with passionate individuals
             interested in building creative ways to exist within their own worlds.
 
-            What do you want to create?
+            <br/>What do you want to create?
           </p>
           <div className="mt-8">
             <CtaButtons />
