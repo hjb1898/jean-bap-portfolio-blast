@@ -399,8 +399,8 @@ function Index() {
         <Modal title="ABOUT ME" onClose={() => setAboutOpen(false)} maxWidth="max-w-lg">
           <p className="text-lg leading-relaxed text-foreground">
             At 19 years old I somehow got a TS clearance, studied Arabic, and did SIGINT
-            for the 5th SFG(A). Afterwards, I embarked on an Keroucian adventure:
-            photographing, canvassing, crafting cocktails, and even dabbling in a bit of real estate.
+            for the 5th SFG(A). Afterwards, I embarked on a Kerouacian adventure:
+            freelancing, studying philosophy, and even dabbling in a bit of off-market real estate.
             All the while enjoying the opportunity to help people pursue their unique ideas 
             within this mad, mad world.
           </p><br/>
