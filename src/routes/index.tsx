@@ -398,12 +398,11 @@ function Index() {
       {aboutOpen && (
         <Modal title="ABOUT ME" onClose={() => setAboutOpen(false)} maxWidth="max-w-lg">
           <p className="text-lg leading-relaxed text-foreground">
-            When I was 19 years old I somehow got a TS clearance, learned Arabic, and worked
-            as a SIGINTer for the 5th Special Forces Group (A). After the Army, I
-            embarked on a lifelong adventure: photographing beauty, canvassing for public causes,
-            studying philosophy, while writing books, crafting cocktails, and even dabbling
-            in a bit of off-market real estate. All the while getting the chance to collab
-            with people passionate about building an authentic future within this mad, mad world.
+            At 19 years old I somehow got a TS clearance, studied Arabic, and did SIGINT
+            for 5th Special Forces Group. Afterwards, I embarked on an Keroucian adventure:
+            photographing, canvassing, crafting cocktails, and even dabbling in a bit of real estate.
+            At every turn enjoying the opportunity to help people build their authentic ideas 
+            within this mad, mad world.
           </p><br/>
          <p className="text-secondary"><em>So, what would you like to create?</em></p>
           <div className="mt-8">
