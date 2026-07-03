@@ -398,17 +398,16 @@ function Index() {
       {aboutOpen && (
         <Modal title="ABOUT ME" onClose={() => setAboutOpen(false)} maxWidth="max-w-lg">
           <p className="text-lg leading-relaxed text-foreground">
-            I got a top secret clearance when I was 19 yrs old, learned Arabic
-            at the Defense Language Institute in Monterey, CA, and spent a few
-            years as a SIGINT nerd for 5th Special Forces Group (A) in Iraq,
-            but primarily in Ken-Tennessee. After getting out I spent over a
-            decade drifting around: photographing things, canvassing for public
-            causes, studying philosophy at GSU, creating cocktails and sometimes
-            menus, even wholesaling real estate. All the while writing about what
-            a mad world we live in and collaborating with passionate individuals
-            interested in building creative ways to exist within their own worlds.
+            When I was 19 years old I got a TS clearance, learned Arabic, and worked
+            as a SIGINTer for the 5th Special Forces Group (A) at Ft. Campbell. 
+            After my time in the military, I'd go on to spend over a decade learning
+            and pursuing ventures of various kinds: photographing beauty, canvassing
+            for public causes, studying philosophy, while writing books, crafting cocktails,
+            and even dabbling in a bit of off-market real estate. All the while I've enjoyed
+            collaborating with individuals who are passionate about building things that
+            are unique and creative and authentically their own within this mad, mad world.
           </p><br/>
-         <p className="text-secondary"><em>What do you want to create?</em></p>
+         <p className="text-secondary"><em>So, what do you want to create?</em></p>
           <div className="mt-8">
             <CtaButtons />
           </div>
