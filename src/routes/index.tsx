@@ -392,9 +392,17 @@ function Index() {
       {aboutOpen && (
         <Modal title="ABOUT ME" onClose={() => setAboutOpen(false)} maxWidth="max-w-lg">
           <p className="text-lg leading-relaxed text-foreground">
-            Former cryptologic linguist specialized in Arabic and GSM/CDMA
-            technologies. Now writing and collaborating with individuals
-            interested in building creative ways to exist within their worlds.
+            I got a top secret clearance when I was 19 yrs old, learned Arabic
+            at the Defense Language Institute in Monterey, CA, and spent a few
+            years as a SIGINT nerd for 5th Special Forces Group (A) in Iraq,
+            but primarily in Ken-Tennessee. After getting out I spent over a
+            decade drifting around: photographing things, canvassing for public
+            causes, studying philosophy at GSU, creating cocktails and sometimes
+            menus, even wholesaling real estate. All the while writing about what
+            a mad world we live in and collaborating with passionate individuals
+            interested in building creative ways to exist within their own worlds.
+
+            What do you want to create?
           </p>
           <div className="mt-8">
             <CtaButtons />
