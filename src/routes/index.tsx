@@ -399,12 +399,12 @@ function Index() {
         <Modal title="ABOUT ME" onClose={() => setAboutOpen(false)} maxWidth="max-w-lg">
           <p className="text-lg leading-relaxed text-foreground">
             At 19 years old I somehow got a TS clearance, studied Arabic, and did SIGINT
-            for 5th Special Forces Group. Afterwards, I embarked on an Keroucian adventure:
+            for the 5th SFG(A). Afterwards, I embarked on an Keroucian adventure:
             photographing, canvassing, crafting cocktails, and even dabbling in a bit of real estate.
-            At every turn enjoying the opportunity to help people build their authentic ideas 
+            All the while enjoying the opportunity to help people pursue their unique ideas 
             within this mad, mad world.
           </p><br/>
-         <p className="text-secondary"><em>So, what would you like to create?</em></p>
+         <p className="text-secondary"><em>What would you like to create?</em></p>
           <div className="mt-8">
             <CtaButtons />
           </div>
