@@ -21,15 +21,15 @@ import bookPoems from "@/assets/book-poems.jpg";
 import bookOgre from "@/assets/book-ogre.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
+ head: () => ({
     meta: [
-      { title: "H. Jean-Baptiste — Creative Partner & Strategist in Atlanta, GA" },
+      { title: "H. Jean-Baptiste: Creative Partner & Strategist in Atlanta" },
       {
         name: "description",
         content:
-          "Atlanta-based creative partner helping founders shape ideas into brand adventures. Ideation, branding, and web/app development from H. Jean-Baptiste.",
+          "Atlanta-based creative partner helping founders shape ideas into brand adventures. Ideation, branding, and web/app development.",
       },
-      { property: "og:title", content: "H. Jean-Baptiste — Creative Partner & Strategist" },
+      { property: "og:title", content: "H. Jean-Baptiste: Creative Partner & Strategist" },
       {
         property: "og:description",
         content: "Helping founders shape ideas into brand adventures.",
@@ -38,9 +38,15 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://jbography.com" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "H. Jean-Baptiste — Creative Partner & Strategist" },
+      { name: "twitter:title", content: "H. Jean-Baptiste: Creative Partner & Strategist" },
       { name: "twitter:description", content: "Helping founders shape ideas into brand adventures." },
       { name: "twitter:image", content: "https://jbography.com/og-image.png" },
+    ],
+    links: [
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
     ],
   }),
   component: Index,
