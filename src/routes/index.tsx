@@ -279,7 +279,7 @@ function Index() {
               type="button"
               onClick={() => setAboutOpen(true)}
               aria-label="About H. Jean-Baptiste"
-              className="group mt-2 flex shrink-0 flex-col items-center gap-1 rounded-sm border-4 border-secondary bg-electric-deep p-3 text-secondary transition-all hover:-rotate-3 hover:bg-secondary hover:text-secondary-foreground sm:p-4"
+              className="group mt-2 flex shrink-0 flex-col items-center gap-1 rounded-sm border-4 border-primary bg-electric-deep p-3 text-secondary transition-all hover:-rotate-3 hover:border-secondary hover:bg-secondary hover:text-secondary-foreground sm:p-4"
             >
               <User className="size-7 sm:size-9" />
               <span className="font-display text-[0.6rem] tracking-widest sm:text-xs">
