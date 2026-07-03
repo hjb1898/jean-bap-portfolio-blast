@@ -120,7 +120,7 @@ const wares = [
 // Easy to swap: update this URL with the real Calendly link.
 const CALENDLY_URL = "https://calendly.com/jbography";
 
-const marqueeItems = ["Ideation", "Storytelling", "Prototyping", "Content Marketing"];
+const marqueeItems = ["Ideation", "Storytelling", "Prototyping", "Content Strategy"];
 
 const focusAreas = [
   {
