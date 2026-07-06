@@ -129,7 +129,7 @@ const focusAreas = [
     body: "We start with a bit of Socratic dialogue. Maybe we meet initially and you've got a fully-formed idea and we pressure-test it; or maybe it's still just a hunch that you've been pondering a while so we articulate it and walk through the logic of it together. Either way, we map out the terrain, root out any potential problems, find the objective no one else is shooting for, and discover opportunities for growth.",
   },
   {
-    title: "BRAND DEVELOPMENT",
+    title: "BRAND IDENTITY",
     Icon: Fingerprint,
     body: "With a clear direction, we can shape how your product or business shows up in the real world. Through logos, typography, and language, we'll create a coherent world of intentionality and meaning that people can immediately see, feel, and recognize as being authentically yours.",
   },
