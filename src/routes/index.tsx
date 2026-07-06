@@ -141,7 +141,7 @@ const focusAreas = [
   {
     title: "CREATIVE DIRECTION",
     Icon: Compass,
-    body: "With a solid brand identity in place, we translate it into visual content that builds up emotional resonance. This means storytelling that encapsulates your professional adventure, published across specific marketing channels that reach your ideal clients and customers in the compelling ways your story needs to be told.",
+    body: "With a solid brand identity in place, we translate it into a narrative engine of content that builds up emotional resonance. This means storytelling that encapsulates your professional adventure, published across specific marketing channels that reach your ideal clients and customers in the compelling ways your story needs to be told.",
   },
 ];
 
