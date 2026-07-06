@@ -401,7 +401,7 @@ function Index() {
             At 19 years old I somehow got a TS clearance, studied Arabic, and did SIGINT
             for the 5th SFG(A). Afterwards, I embarked on a Kerouacian adventure:
             freelancing, studying philosophy, and even dabbling in a bit of off-market real estate.
-            All the while, learning and helping people pursue their unique ideas 
+            All the while, learning how to help people pursue their unique ideas 
             within this mad, mad world.
           </p><br/>
          <p className="text-secondary"><em>What would you like to create?</em></p>
