@@ -131,7 +131,7 @@ const focusAreas = [
   {
     title: "BRAND IDENTITY",
     Icon: Fingerprint,
-    body: "With a clear direction, we can shape how your product or business shows up in the real world. Through logos, typography, and language, we'll create a coherent world of intentionality and meaning that people can immediately see, feel, and recognize as being authentically yours.",
+    body: "With a clear direction, we can shape how your product or business shows up in the real world. Through logos, typography, and language, we'll conceptualize a coherent world of intentionality and meaning that people can immediately see, feel, and recognize as being authentically yours.",
   },
   {
     title: "APP & WEBSITE DEVELOPMENT",
