@@ -141,14 +141,6 @@ function CreativeDebrief() {
 
   return (
     <main className="min-h-screen bg-background">
-      {/* Back to home */}
-      
-       <a href="/"
-        aria-label="Back to home"
-        className="fixed left-4 top-4 z-40 inline-flex items-center gap-2 rounded-sm border-4 border-primary bg-electric-deep px-3 py-2 font-display text-[0.6rem] tracking-widest text-secondary transition-all hover:-translate-y-0.5 hover:-rotate-2 hover:border-secondary hover:bg-secondary hover:text-secondary-foreground sm:left-8 sm:top-8 sm:px-4 sm:py-2.5 sm:text-xs"
-      >
-        ← BACK
-      </a>
       {/* decorative chaos blobs */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -left-16 top-40 size-48 rotate-12 bg-secondary/10" />
