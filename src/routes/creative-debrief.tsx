@@ -334,14 +334,13 @@ function CreativeDebrief() {
             <p>
               To show what me+nu could do, I needed a room to do it in, so I went with
               Foxglove: a botanical cocktail bar and kitchen that exists nowhere and feels
-              like somewhere, low light and poured herbs and a little wild around the edges.
+              like somewhere.
             </p>
             <p>
-              Foxglove got the full brand adventure a paying client would get. A script wordmark
+              Foxglove got the brand treatment a client would get. A script wordmark
               that leans forward like it is already mid-sentence. Candle cream and deep aubergine,
-              amber like light through a bottle, a rose lifted from the flower it is named for.
-              Fraunces in italic for the voice, quiet mono for the small print. A whole world of
-              intentionality you could see, feel, and believe in.
+              amber like light through a bottle. Fraunces in italic for the voice, quiet mono
+              for the small print.
             </p>
           </div>
 
