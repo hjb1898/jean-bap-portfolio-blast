@@ -208,12 +208,6 @@ function CreativeDebrief() {
 
           <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
             <p>
-              Menus are the most-read pages in all of hospitality and the least alive, a whole
-              night of somebody&apos;s intention pressed flat onto a card. Every good bar runs on
-              reasons: why this farm, why this bitter, why that name on the glass. Almost none of
-              it ever reaches the hand around the drink.
-            </p>
-            <p>
               For some reason I kept doodling this idea in my notebook. And while I drew it up, I
               thought of conversations I&apos;d had in the past with owners of restaurants and
               bars who lamented the fact that they didn&apos;t feel in control of their narrative.
