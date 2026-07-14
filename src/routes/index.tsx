@@ -333,14 +333,6 @@ function Index() {
               Current Focus
             </h2>
           </div>
-        {/* Current Focus */}
-        <section className="mb-12 sm:mb-16">
-          <div className="mb-8 flex items-center gap-4">
-            <RedSquare />
-            <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
-              Current Focus
-            </h2>
-          </div>
           <div className="flex flex-col gap-5">
             {focusAreas.map(({ title, body, Icon }) => (
               <article
