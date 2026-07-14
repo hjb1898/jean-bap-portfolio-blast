@@ -18,13 +18,13 @@ export const Route = createFileRoute("/creative-debrief")({
       {
         name: "description",
         content:
-          "me+nu, a way of thinking up digital experiences for restaurants and bars, and the process that led there.",
+          "me+nu, digital experiences for restaurants and bars, and the process that led there.",
       },
       { property: "og:title", content: "Creative Debrief: me+nu" },
       {
         property: "og:description",
         content:
-          "me+nu, a way of thinking up digital experiences for restaurants and bars, and the process that led there.",
+          "me+nu, digital experiences for restaurants and bars, and the process that led there.",
       },
       { property: "og:image", content: "https://jbography.com/og-image.png" },
       { property: "og:url", content: "https://jbography.com/creative-debrief" },
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/creative-debrief")({
       { name: "twitter:title", content: "Creative Debrief: me+nu" },
       {
         name: "twitter:description",
-        content: "me+nu, a way of thinking up digital experiences for restaurants and bars.",
+        content: "me+nu, digital experiences for restaurants and bars.",
       },
     ],
     links: [
@@ -171,8 +171,7 @@ function CreativeDebrief() {
             <span className="text-primary">]</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Not a finished product so much as a way of thinking up digital experiences for food
-            and drink. <span className="text-secondary">me+nu is the proof piece.</span>
+            Digital experiences for restaurants and bars. <span className="text-secondary">me+nu is the custom-build platform.</span>
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
