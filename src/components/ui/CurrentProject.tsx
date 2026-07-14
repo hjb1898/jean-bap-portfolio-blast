@@ -1,14 +1,13 @@
 import { Link } from "@tanstack/react-router";
 
 /**
- * CurrentProject — featured section rendered directly above Current Focus
- * on the homepage. Header treatment matches Current Focus (RedSquare + h2)
- * so the two section headers align visually.
- * The card links to the me+nu creative debrief at /creative-debrief.
+ * CurrentProject — featured section rendered directly above Current Focus.
+ * Card layout mirrors the Focus cards: horizontal, full-width, same border
+ * and hover treatment. Foxglove preview occupies the left "icon" slot,
+ * project name and description occupy the right "body" slot.
+ * Links to the me+nu creative debrief at /creative-debrief.
  */
 
-// Local copy of RedSquare so this component is self-contained.
-// Matches the RedSquare used in index.tsx and creative-debrief.tsx.
 function RedSquare() {
   return (
     <span className="inline-block size-5 shrink-0 bg-primary shadow-[3px_3px_0_0_var(--electric-deep)] sm:size-6" />
@@ -18,7 +17,7 @@ function RedSquare() {
 const CurrentProject = () => {
   return (
     <section className="mb-12 sm:mb-16">
-      {/* Header — same treatment as Current Focus */}
+      {/* Header — matches Current Focus */}
       <div className="mb-8 flex items-center gap-4">
         <RedSquare />
         <h2 className="text-3xl tracking-tight text-foreground sm:text-5xl">
@@ -28,13 +27,13 @@ const CurrentProject = () => {
 
       <Link
         to="/creative-debrief"
-        className="group block w-full md:max-w-md transition-transform duration-300 hover:-translate-y-2"
         aria-label="me+nu — read the creative debrief"
+        className="group flex flex-col gap-5 rounded-sm border-4 border-primary bg-electric-deep p-5 transition-all hover:-translate-y-1 hover:border-secondary hover:shadow-[8px_8px_0_0_var(--yellow-pop)] sm:flex-row sm:items-start sm:gap-7 sm:p-7"
       >
-        <div className="rounded-sm overflow-hidden border-4 border-primary transition-colors duration-300 group-hover:border-secondary">
-          {/* ---- Static foxglove preview (non-interactive) ---- */}
+        {/* Left column: foxglove preview (occupies the "icon" slot) */}
+        <div className="sm:w-64 sm:shrink-0">
           <div
-            className="pointer-events-none select-none px-6 py-12 flex flex-col items-center text-center"
+            className="pointer-events-none select-none flex flex-col items-center text-center rounded-sm px-4 py-8 border-4 border-secondary"
             style={{
               background:
                 "radial-gradient(ellipse at 50% 0%, #33222e 0%, #241821 55%, #1c121a 100%)",
@@ -44,7 +43,7 @@ const CurrentProject = () => {
               className="italic font-bold leading-none"
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(2.75rem, 8vw, 3.5rem)",
+                fontSize: "clamp(1.75rem, 5vw, 2.25rem)",
                 color: "#F4EDE3",
               }}
             >
@@ -52,52 +51,43 @@ const CurrentProject = () => {
             </div>
 
             <div
-              className="mt-3 uppercase"
+              className="mt-2 uppercase"
               style={{
                 color: "#BF8A54",
-                fontSize: "0.65rem",
-                letterSpacing: "0.45em",
+                fontSize: "0.55rem",
+                letterSpacing: "0.4em",
               }}
             >
-              Botanical Cocktail Bar &amp; Kitchen
+              Botanical Cocktail Bar
             </div>
 
-            <p
-              className="mt-8 max-w-xs leading-relaxed"
-              style={{ color: "#D9CCD3", fontSize: "0.95rem" }}
-            >
-              Tell us what you're after and we'll build a list to your taste,
-              or dive straight into the menu.
-            </p>
-
             <div
-              className="mt-8 px-7 py-3 rounded-xl font-semibold"
+              className="mt-5 px-4 py-2 rounded-lg font-semibold"
               style={{
                 background: "#3a2b22",
                 border: "1px solid #8a6a3f",
                 color: "#F4EDE3",
-                fontSize: "0.95rem",
+                fontSize: "0.75rem",
               }}
             >
               Find My Taste &rarr;
             </div>
           </div>
+        </div>
 
-          {/* ---- Card footer: project name + link cue ---- */}
-          <div
-            className="flex items-center justify-between px-5 py-4"
-            style={{ background: "#1c121a", borderTop: "1px solid #33222e" }}
-          >
-            <span
-              className="text-foreground text-lg"
-              style={{ fontFamily: "'Archivo Black', sans-serif" }}
-            >
-              me<span className="text-primary">+</span>nu
-            </span>
-            <span className="text-sm font-semibold text-secondary transition-colors duration-300 group-hover:text-foreground">
-              Read the creative debrief &rarr;
-            </span>
-          </div>
+        {/* Right column: project title + body + link cue */}
+        <div className="flex flex-1 flex-col gap-3">
+          <h3 className="font-display text-xl leading-tight text-secondary sm:text-2xl">
+            me<span className="text-primary">+</span>nu
+          </h3>
+          <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+            A way of thinking up digital experiences for restaurants and bars.
+            Every dish and drink, described in full: photos, sourcing, the
+            maker, the why. Foxglove is the demo venue built to prove it.
+          </p>
+          <span className="mt-2 font-display text-sm text-secondary transition-colors group-hover:text-foreground">
+            Read the creative debrief &rarr;
+          </span>
         </div>
       </Link>
     </section>
