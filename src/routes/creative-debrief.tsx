@@ -161,7 +161,7 @@ function CreativeDebrief() {
         {/* Hero */}
         <header className="mb-14 sm:mb-20">
           <p className="mb-5 inline-block whitespace-nowrap bg-secondary px-3 py-1 font-display text-[0.65rem] tracking-[0.2em] text-secondary-foreground sm:text-sm">
-            &nbsp; CASE STUDY &middot; CREATIVE PROCESS &middot; 2026&nbsp;
+            &nbsp; me+nu &middot; CREATIVE DEBRIEF &middot; 2026&nbsp;
           </p>
           <h1 className="text-[clamp(2.75rem,11vw,7rem)] font-black leading-[0.85] tracking-tighter">
             <span className="text-primary">[</span>
