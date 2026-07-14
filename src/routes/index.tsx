@@ -14,7 +14,7 @@ import {
   Code,
   Compass,
 } from "lucide-react";
-import CurrentProject from "@/components/CurrentProject";
+import CurrentProject from "@/components/ui/CurrentProject";
 
 import bookDeath from "@/assets/book-death.jpg";
 import bookStupid from "@/assets/book-stupid.jpg";
