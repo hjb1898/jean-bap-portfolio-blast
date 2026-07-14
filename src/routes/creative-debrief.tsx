@@ -329,11 +329,11 @@ function CreativeDebrief() {
             <p>
               me+nu does not really have a brand of its own, and that is the point: the brand is
               always the venue&apos;s. me+nu is the frame, the bracket in the wordmark left open
-              for whoever fills it. To show what the frame could hold, I built one.
+              for whoever fills it.
             </p>
             <p>
-              To show what me+nu could do, I needed a room to do it in, so I built one out of thin
-              air. Foxglove: a botanical cocktail bar and kitchen that exists nowhere and feels
+              To show what me+nu could do, I needed a room to do it in, so I went with
+              Foxglove: a botanical cocktail bar and kitchen that exists nowhere and feels
               like somewhere, low light and poured herbs and a little wild around the edges.
             </p>
             <p>
