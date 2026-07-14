@@ -226,7 +226,7 @@ function CreativeDebrief() {
               no one cares to care.
             </p>
             <p>
-              I&apos;ve had this belief for a while now that websites should come back to being
+              I&apos;ve had this belief for a while that websites should come back to being
               the foreground and playground of online activity, as opposed to social media
               platforms. I&apos;ve imagined websites where one happily peruses not merely to
               retrieve information, but is educated while being entertained. The brochure nature
@@ -234,18 +234,18 @@ function CreativeDebrief() {
             </p>
             <p>
               But what if you were to merge the two: the branded informational aspect of a
-              business site with the form or playful fluency of a social media platform. Think of
+              business site with the form or playful fluency of social media activity. Think of
               the way people play with and through information, finding stories, unearthing lore,
               clicking on pictures, learning names, hopping around with their thumbs. Like a
-              platform video game, people naturally bounce around social media, finding meaning of
-              phenomena sprawled across links and pages.
+              platform video game, people naturally bounce around social media, finding the meaning of
+              various phenomena sprawled across leagues of links and pages.
             </p>
             <p>
               And that was the impetus for me+nu, to create a custom-built space wherein
               something as ordinary as a menu can light up as an entry way into an adventure of
               pictures and stories and clickable leads that lead right into another funnel.
-              Without fighting the algorithms and distractions found elsewhere, the world of an
-              f&amp;b concept opens up, authentically, playfully.
+              Without fighting the algorithms and distractions found elsewhere, the cloistered world of an
+              restaurant or bar concept opens up—authentically, playfully.
             </p>
           </div>
 
@@ -317,7 +317,7 @@ function CreativeDebrief() {
           </div>
 
           <blockquote className="mt-10 border-l-4 border-secondary pl-5 font-display text-lg italic leading-snug text-secondary sm:text-2xl">
-            A space of their own, off in a quiet corner away from algorithms and distractions.
+            A space of their own, away from algorithms and distractions.
           </blockquote>
         </section>
 
@@ -327,18 +327,18 @@ function CreativeDebrief() {
 
           <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
             <p>
-              me+nu does not really have a brand of its own, and that is the point: the brand is
-              always the venue&apos;s. me+nu is the frame, the bracket in the wordmark left open
+              me+nu doesn&apos;t really have a brand of its own (right now), but that&apos;s sorta the point:
+              the brand is always the venue&apos;s. me+nu is the frame, the bracket in the wordmark left open
               for whoever fills it.
             </p>
             <p>
-              To show what me+nu could do, I needed a room to do it in, so I went with
-              Foxglove: a botanical cocktail bar and kitchen that exists nowhere and feels
-              like somewhere.
+              To show what me+nu can do, I needed a room to do it in, so I went with
+              Foxglove: a botanical cocktail bar and kitchen that exists nowhere yet feels
+              like somewhere definitely here in Atlanta.
             </p>
             <p>
               Foxglove got the brand treatment a client would get. A script wordmark
-              that leans forward like it is already mid-sentence. Candle cream and deep aubergine,
+              that leans forward with tenderness. Candle cream and deep aubergine,
               amber like light through a bottle. Fraunces in italic for the voice, quiet mono
               for the small print.
             </p>
@@ -403,14 +403,15 @@ function CreativeDebrief() {
             <p>
               Then the building, and the long nights. Every screen was designed and planned
               first, worked out with Claude before anything got built. From there the full-stack
-              assembly ran agentically through Claude Code, with me on every decision, reading the
-              diffs and calling the changes. TanStack, Supabase, and Cloudflare underneath, with a
-              quiet bot-check at the door so no guest meets a login wall.
+              assembly ran agentically through Claude Code, with me looking over every decision, reading the
+              diffs and coordinating the changes. The stack consists of TanStack, Supabase, and Cloudflare, with a
+              quiet bot-check built in at the door so no guest meets a login wall, and a Turnstile present for the Operator Admin Login.
             </p>
             <p>
-              It comes to a handful of screens that do real work: a taste quiz that returns
-              drinks with the reason each one fits, a Platter to save them, maker profiles that
-              carry the why behind the glass, and an operator dashboard.
+              The UX is full of pages, links, and a schema that does real work: a taste quiz that determines
+              suggested menu items, detail pages with ingredients which link to a full item list, a Platter to save and share items, maker profiles that
+              carry the why behind the item and introduce themself as a character in the concept's story, and an operator dashboard—accessible from an admin login page—with
+              a menu editor and analytics.
             </p>
           </div>
 
@@ -437,7 +438,7 @@ function CreativeDebrief() {
             <article className="rounded-sm border-4 border-primary bg-electric-deep p-6">
               <h3 className="font-display text-lg text-secondary">Operator dashboard</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Analytics an operator can read: what guests looked at, saved, and shared.
+                Menu editor and analytics an operator can read: what guests looked at, saved, and shared.
               </p>
             </article>
           </div>
