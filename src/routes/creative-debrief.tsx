@@ -219,7 +219,7 @@ function CreativeDebrief() {
             <p>
               I&apos;ve had this belief for a while now that websites should come back to being
               the foreground and playground of online activity, as opposed to social media
-              platforms. I have imagined websites where one happily peruses not merely to
+              platforms. I&apos;ve imagined websites where one happily peruses not merely to
               retrieve information, but is educated while being entertained. The brochure nature
               of so many business websites is so trite and boring af.
             </p>
