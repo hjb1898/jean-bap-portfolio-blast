@@ -396,9 +396,9 @@ function CreativeDebrief() {
           </div>
         </section>
 
-        {/* 03 App & Website Development */}
+        {/* 03 Prototyping */}
         <section className="mb-16 sm:mb-24">
-          <SectionHead num="03" title="App & Website Development" />
+          <SectionHead num="03" title="Prototyping" />
 
           <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
             <p>
