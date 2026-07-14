@@ -246,7 +246,7 @@ function CreativeDebrief() {
               And that was the impetus for me+nu, to create a custom-built space wherein
               something as ordinary as a menu can light up as an entry way into an adventure of
               pictures and stories and clickable leads that lead right into another funnel.
-              Without fighting the algorithms and distractions found elsewhere, the cloistered world of an
+              Without fighting the algorithms and distractions found elsewhere, the cloistered world of a
               restaurant or bar concept opens up—authentically, playfully.
             </p>
           </div>
