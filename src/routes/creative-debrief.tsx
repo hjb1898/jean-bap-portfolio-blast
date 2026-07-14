@@ -318,8 +318,7 @@ function CreativeDebrief() {
           </div>
 
           <blockquote className="mt-10 border-l-4 border-secondary pl-5 font-display text-lg italic leading-snug text-secondary sm:text-2xl">
-            A room of their own, off in a quiet corner away from the feeds and the algorithms,
-            where everything a place believes sits waiting with the door open.
+            A space of their own, off in a quiet corner away from algorithms and distractions.
           </blockquote>
         </section>
 
