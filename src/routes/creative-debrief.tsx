@@ -410,7 +410,7 @@ function CreativeDebrief() {
               quiet bot-check built in at the door so no guest meets a login wall, and a Turnstile present for the Operator Admin Login.
             </p>
             <p>
-              The UX is full of pages, links, and a schema that does real work: a taste quiz that determines
+              The UX is full of pages, photos, links, with an underlying schema that does real work: a taste quiz that determines
               suggested menu items, detail pages with ingredients which link to a full item list, a Platter to save and share items, maker profiles that
               carry the why behind the item and introduce themself as a character in the concept's story, and an operator dashboard—accessible from an admin login page—with
               a menu editor and analytics.
