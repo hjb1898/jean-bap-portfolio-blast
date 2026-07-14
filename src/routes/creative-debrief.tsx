@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect } from "react";
 import {
   ArrowUpRight,
@@ -147,7 +147,16 @@ function CreativeDebrief() {
         <div className="absolute right-8 top-10 size-24 rotate-45 bg-primary/15" />
         <div className="absolute bottom-24 left-1/3 size-32 -rotate-6 bg-secondary/10" />
       </div>
-
+      {/* Back to home */}
+        <Link
+          to="/"
+          className="group mb-10 inline-flex items-center gap-3 font-display text-xs tracking-widest text-muted-foreground transition-colors hover:text-foreground sm:mb-12 sm:text-sm"
+        >
+          <span className="grid size-8 shrink-0 place-items-center rounded-sm border-2 border-primary bg-background text-primary transition-all group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 group-hover:shadow-[3px_3px_0_0_var(--yellow-pop)] sm:size-9">
+            <ArrowLeft className="size-4 sm:size-5" />
+          </span>
+          HOME
+        </Link>
       <div className="relative mx-auto max-w-5xl px-5 py-12 sm:px-8 sm:py-20">
         {/* Hero */}
         <header className="mb-14 sm:mb-20">
