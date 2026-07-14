@@ -195,7 +195,7 @@ function CreativeDebrief() {
               <span className="font-display text-[0.6rem] tracking-widest text-muted-foreground">
                 STACK
               </span>
-              <span className="text-sm text-foreground">TanStack &middot; Supabase &middot; Cloudflare</span>
+              <span className="text-sm text-foreground">TanStack Start&middot; Supabase &middot; Cloudflare</span>
             </div>
             <div className="flex flex-col gap-1">
               <span className="font-display text-[0.6rem] tracking-widest text-muted-foreground">
@@ -406,7 +406,7 @@ function CreativeDebrief() {
               Then the building, and the long nights. Every screen was designed and planned
               first, worked out with Claude before anything got built. From there the full-stack
               assembly ran agentically through Claude Code, with me looking over every decision, reading the
-              diffs and coordinating the changes. The stack consists of TanStack, Supabase, and Cloudflare, with a
+              diffs and coordinating the changes. The stack consists of TanStack Start, Supabase, and Cloudflare, with a
               quiet bot-check built in at the door so no guest meets a login wall, and a Turnstile present for the Operator Admin Login.
             </p>
             <p>
