@@ -195,7 +195,7 @@ function CreativeDebrief() {
               <span className="font-display text-[0.6rem] tracking-widest text-muted-foreground">
                 STACK
               </span>
-              <span className="text-sm text-foreground">TanStack Start&middot; Supabase &middot; Cloudflare</span>
+              <span className="text-sm text-foreground">TanStack Start &middot; Supabase &middot; Cloudflare</span>
             </div>
             <div className="flex flex-col gap-1">
               <span className="font-display text-[0.6rem] tracking-widest text-muted-foreground">
