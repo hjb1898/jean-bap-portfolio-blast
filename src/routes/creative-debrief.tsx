@@ -171,7 +171,7 @@ function CreativeDebrief() {
                 ROLE
               </span>
               <span className="text-sm text-foreground">
-                Strategy, brand, design direction
+                Ideation, Strategy, Prototyping, Creative Direction
               </span>
             </div>
             <div className="flex flex-col gap-1">
