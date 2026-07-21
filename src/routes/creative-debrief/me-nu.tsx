@@ -11,7 +11,7 @@ import {
   CalendarDays,
 } from "lucide-react";
 
-export const Route = createFileRoute("/creative-debrief")({
+export const Route = createFileRoute("/creative-debrief/me-nu")({
   head: () => ({
     meta: [
       { title: "Creative Debrief: me+nu · H. Jean-Baptiste" },
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/creative-debrief")({
           "me+nu, digital experiences for restaurants and bars, and the process that led there.",
       },
       { property: "og:image", content: "https://jbography.com/og-image.png" },
-      { property: "og:url", content: "https://jbography.com/creative-debrief" },
+      { property: "og:url", content: "https://jbography.com/creative-debrief/me-nu" },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Creative Debrief: me+nu" },
