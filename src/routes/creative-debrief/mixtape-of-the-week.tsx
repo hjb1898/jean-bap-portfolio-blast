@@ -292,17 +292,17 @@ const CSS = `.mowd{
 .mowd a:focus-visible, .mowd .btn:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:2px}
 /* ---------- responsive ---------- */
   @media (max-width:880px){
-    .ticket{grid-template-columns:1fr}
-    .stub-side{border-left:0;border-top:2px dashed var(--dot)}
-    .stub-side::before{left:50%;top:-13px;transform:translateX(-50%)}
-    .stub-side::after{display:none}
-    .brand-grid,.spec,.tape{grid-template-columns:1fr}
-    .g4{grid-template-columns:repeat(2,1fr)}
-    .g3,.dir{grid-template-columns:1fr}
-    .adm-thead{display:none}
-    .adm-tr{grid-template-columns:64px 1fr;gap:12px}
-    .adm-tr .adm-status,.adm-tr .adm-tracks{display:none}
-    .adm-blog{grid-column:1 / -1;border-left:0;padding-left:0;border-top:1px solid var(--hair);padding-top:10px;margin-top:6px}
+    .mowd .ticket{grid-template-columns:1fr}
+    .mowd .stub-side{border-left:0;border-top:2px dashed var(--dot)}
+    .mowd .stub-side::before{left:50%;top:-13px;transform:translateX(-50%)}
+    .mowd .stub-side::after{display:none}
+    .mowd .brand-grid,.mowd .spec,.mowd .tape{grid-template-columns:1fr}
+    .mowd .g4{grid-template-columns:repeat(2,1fr)}
+    .mowd .g3,.mowd .dir{grid-template-columns:1fr}
+    .mowd .adm-thead{display:none}
+    .mowd .adm-tr{grid-template-columns:64px 1fr;gap:12px}
+    .mowd .adm-tr .adm-status,.mowd .adm-tr .adm-tracks{display:none}
+    .mowd .adm-blog{grid-column:1 / -1;border-left:0;padding-left:0;border-top:1px solid var(--hair);padding-top:10px;margin-top:6px}
   }
 @media (max-width:560px){.mowd{font-size:16px}
 .mowd .wrap{padding:0 18px}
