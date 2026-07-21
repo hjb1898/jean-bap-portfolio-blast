@@ -353,10 +353,10 @@ const BODY = `<div class="topbar">
   <div class="wrap">
     <div class="sec-head"><div class="sec-num">01</div><h2 class="sec-title">Ideation &amp; <span class="accent">Strategy</span></h2></div>
     <div class="prose">
-      <p class="drop">There's something powerful about the way music moves us. A lot of songs carry lyrics that, under normal linguistic conditions, ought to read as nonsensical or incoherent. Yet inside the messy real world of communication, those poetic turns of phrase, wedded to the logics of rhythm, beat, tempo, and time, manufacture and articulate an ineffable level of understanding that beats any essay or article.</p>
-      <p>I have fond memories of receiving and making mixtape CDs full of songs that earnestly tried to convey some elusive string of emotions. It's a youthful thing, and I'm honestly not sure the pastime still exists for the youngins, but I've been a little obsessed with the idea that it needs reviving.</p>
-      <p>Funny thing is, the idea for Mixtape of the Week didn't start with making an online mixtape. It started with me scrolling Instagram, where I happened on the ATL Hardcore page and noticed for the first time that they link a public Dropbox on their linktree: a digital treasure trove of old Atlanta hardcore albums and demos. Pretty sick.</p>
-      <p>The first version of the idea hit like this: an online player for sharing an album of the day, some old hardcore gem, as a way to keep the music and the scene alive. Still a rad idea. But to make it sustainable for a one-man operation, especially one fueled by untrammeled neurodivergency, a weekly tempo became the obvious move.</p>
+      <p class="drop">There's something powerful about the way music moves us. I love thinking about how a lot of songs carry lyrics which, under normal linguistic conditions, ought to read as nonsensical, absurd, or downright incoherent. Yet inside the messy real world of communication, those poetic turns of phrase, wedded to the logics of rhythm, beat, tempo, and time, articulate an unmatched level of clarity and understanding into the human condition.</p>
+      <p>Like many millenials, I have fond memories of receiving and <em>burning</em> mixtape CDs full of songs earnestly attempting to convey some elusive string of emotions. It's a youthful thing, and I'm honestly not sure the pastime still exists for the youngins, but I've been a bit obsessed with the idea that it needs reviving.</p>
+      <p>Funny thing is, the idea for Mixtape of the Week didn't start with making an online mixtape. It started with me scrolling Instagram, where I happened upon the ATL Hardcore page and noticed for the first time that they link a public Dropbox on their linktree: a digital treasure trove of old Atlanta hardcore albums and demos, which ngl is pretty sick.</p>
+      <p>The first version of the idea hit like this: what if I build an online music player for sharing an album of the day, like, some old hardcore gems from bands like Fight Like a Brave, as a way to keep the music and the scene alive. Rad idea, but to make it sustainable for a one-man operation (especially one fueled by untrammeled neurodivergency), a weekly tempo became the obvious move.</p>
     </div>
 
     <div class="tape">
@@ -364,13 +364,13 @@ const BODY = `<div class="topbar">
         <div class="side-tag">Side A · the spark</div>
         <span class="arrow-note">where it began</span>
         <h4>Album of the day</h4>
-        <p>An online player surfacing one old hardcore gem at a time, pulled straight from the ATL Hardcore vault. A love letter to a scene, on a daily clock.</p>
+        <p>An online music player surfacing one some old Atlanta hardcore records, pulled straight from the ATL Hardcore IG page's vault. A cool techy way to help the scene, on a daily clock.</p>
       </article>
       <article class="side b">
         <div class="side-tag">Side B · the pivot</div>
         <span class="arrow-note">where it landed</span>
         <h4>A weekly mixtape</h4>
-        <p>A curated tape every week, sustainable for one person, and a bridge to a wider set of listeners. Sharing music becomes making a space for connection.</p>
+        <p>A curation of jams every week, bridging to a wide set of listeners and emotions. (And a way to get normies to listen to some hardcore every once 'n a while lol.)</p>
       </article>
     </div>
 
@@ -382,8 +382,8 @@ const BODY = `<div class="topbar">
     <div class="quote-stub">
       <div class="qs-side">Admit One</div>
       <div class="qs-body">
-        <div class="qs-tag"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--violet);display:inline-block"></span> The whole point · № 001</div>
-        <p class="qs-quote"><span class="q">&ldquo;</span>Keep the music, and the scene, alive.<span class="q">&rdquo;</span></p>
+        <div class="qs-tag"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--violet);display:inline-block"></span> The Position · № 001</div>
+        <p class="qs-quote"><span class="q">&ldquo;</span>Keep the music alive and bridge scenes of emotion.<span class="q">&rdquo;</span></p>
         <div class="qs-foot">
           <span>Doors open · gone at week's end</span>
           <span class="qs-barcode" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
@@ -407,7 +407,7 @@ const BODY = `<div class="topbar">
       <div class="character">
         <div class="char-tag">Resident DJ · Narrator</div>
         <div class="char-name">Q.D. Neuf<span class="aka">a.k.a. Nuff Said</span></div>
-        <p>The voice on the blog and the hand on the aux. Half liner notes, half lore, he introduces each week's tape and the artists on it as characters in an unfolding story.</p>
+        <p>The voice on the blog and the hand on the aux. He introduces each week's tape, some lore, and the artists on it as characters in an unfolding meta-narrative.</p>
         <div class="theme-toggle" aria-hidden="true"><span>Day</span><span class="on">Auto</span><span>Night</span></div>
       </div>
     </div>
@@ -419,7 +419,7 @@ const BODY = `<div class="topbar">
           <div class="sw"><div class="chip" style="background:#f3f0e8"></div><div class="nm">Paper</div><div class="hex">#F3F0E8</div></div>
           <div class="sw"><div class="chip" style="background:#17151a"></div><div class="nm">Ink</div><div class="hex">#17151A</div></div>
           <div class="sw"><div class="chip" style="background:#6a5ae0"></div><div class="nm">Violet</div><div class="hex">#6A5AE0</div></div>
-          <div class="sw"><div class="chip" style="background:#d9432e"></div><div class="nm">Red</div><div class="hex">#D9432E</div></div>
+          <div class="sw"><div class="chip" style="background:#d9432e"></div><div class="nm">Red (Dashboard)</div><div class="hex">#D9432E</div></div>
           <div class="sw"><div class="chip" style="background:#b7abea"></div><div class="nm">Lavender</div><div class="hex">#B7ABEA</div></div>
         </div>
       </div>
@@ -438,7 +438,7 @@ const BODY = `<div class="topbar">
 <!-- 03 DEVELOPMENT -->
 <section id="development">
   <div class="wrap">
-    <div class="sec-head"><div class="sec-num">03</div><h2 class="sec-title">Develop<span class="accent">ment</span></h2></div>
+    <div class="sec-head"><div class="sec-num">03</div><h2 class="sec-title">Web Develop<span class="accent">ment</span></h2></div>
     <div class="prose">
       <p class="drop">Same as usual, I worked with Claude as architect for the site and Claude Code to build the music player: Next.js App Router on Vercel, Tailwind, Zustand for player state, and a Cloudflare R2 bucket holding the audio.</p>
       <p>Back when the idea was still album-of-the-day, the plan was to download albums and upload them into an R2 bucket by hand. With the pivot to a mixtape structure, we built a local dashboard for pushing songs up to R2 instead, which let me sidestep standing up a whole system of authorization, R2 writes, and a database. For this iteration, that was overkill.</p>
@@ -447,7 +447,7 @@ const BODY = `<div class="topbar">
 
     <!-- FRONT OF HOUSE: app player recreation -->
     <div class="artifact">
-      <div class="artifact-cap"><span class="lbl"><b>Front of house</b> · the weekly player</span></div>
+      <div class="artifact-cap"><span class="lbl"><b>Frontend</b> · the weekly player</span></div>
       <div class="app">
         <div class="app-top">
           <div class="app-mark">Mixtape of the Week</div>
@@ -482,7 +482,7 @@ const BODY = `<div class="topbar">
 
     <!-- THE BOOTH: admin dashboard recreation -->
     <div class="artifact">
-      <div class="artifact-cap"><span class="lbl"><b>The booth</b> · admin, designed in Claude Design</span></div>
+      <div class="artifact-cap"><span class="lbl"><b>Dashboard</b> · admin, designed in Claude Design</span></div>
       <div class="adm">
         <div class="adm-top">
           <div class="adm-brand"><span class="m">Mixtape of the Week</span><span class="slash">/admin</span></div>
@@ -526,7 +526,7 @@ const BODY = `<div class="topbar">
       <div class="card"><div class="idx">A</div><h4>The player</h4><p>A persistent audio player with state held in Zustand, so the tape keeps rolling as you move around.</p></div>
       <div class="card"><div class="idx">B</div><h4>The setlist</h4><p>Every track, artist, and runtime laid out like a bill for the night. Read it, or press play.</p></div>
       <div class="card"><div class="idx">C</div><h4>Local upload dash</h4><p>A lightweight dashboard for pushing songs to the R2 bucket, no auth or database to babysit yet.</p></div>
-      <div class="card"><div class="idx">D</div><h4>Blog posts</h4><p>Liner notes from Q.D. Neuf, wired in and ready to build buzz around each tape and its artists.</p></div>
+      <div class="card"><div class="idx">D</div><h4>Blog posts</h4><p>Posts from Q.D. Neuf, wired in and ready to build buzz around each tape and its artists.</p></div>
     </div>
   </div>
 </section>
@@ -573,7 +573,7 @@ const BODY = `<div class="topbar">
 
       <!-- The blog -->
       <article class="dir-card">
-        <svg class="dir-art" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A page of liner notes with a pen">
+        <svg class="dir-art" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A page of notes with a pen">
           <rect width="400" height="300" fill="#f3f0e8"/>
           <rect x="96" y="52" width="180" height="210" rx="4" fill="#6a5ae0" opacity="0.14"/>
           <rect x="84" y="44" width="180" height="210" rx="4" fill="#fbfaf6" stroke="#17151a" stroke-width="2.5"/>
@@ -601,7 +601,7 @@ const BODY = `<div class="topbar">
         <div class="dir-txt">
           <div class="dir-kick">Grow</div>
           <h4>The Blog, Expanded</h4>
-          <p>Q.D. Neuf's liner notes grow into real buzz for artists and their projects, written in-character as the resident DJ.</p>
+          <p>Q.D. Neuf's posts grow into real buzz for artists and their projects, written in-character as the resident DJ.</p>
         </div>
       </article>
 
