@@ -339,7 +339,7 @@ const BODY = `<div class="topbar">
         <div class="meta-row"><div class="meta-k">Role</div><div class="meta-v">Ideation, Strategy, Development, Creative Direction</div></div>
         <div class="meta-row"><div class="meta-k">Debut</div><div class="meta-v">M.O.W. #1 · Deadbeat Summer</div></div>
         <div class="meta-row"><div class="meta-k">Stack</div><div class="meta-v">Next.js · Zustand · Cloudflare R2 · Vercel</div></div>
-        <div class="meta-row"><div class="meta-k">Status</div><div class="meta-v"><a href="https://mixtape-of-the-week.vercel.app/">Live &rarr; listen</a></div></div>
+        <div class="meta-row"><div class="meta-k">Status</div><div class="meta-v"><a href="https://mixtape-of-the-week.vercel.app/" target="_blank" rel="noopener noreferrer">Live &rarr; listen</a></div></div>
         <div class="barcode" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       </aside>
     </div>
@@ -654,7 +654,7 @@ const BODY = `<div class="topbar">
     <div class="cta-row">
       <a class="btn solid" href="mailto:howdy@jbography.com">Let's talk</a>
       <a class="btn ghost" href="https://calendly.com/jbography">Schedule a call</a>
-      <a class="btn ghost" href="https://mixtape-of-the-week.vercel.app/">Listen to #1</a>
+      <a class="btn ghost" href="https://mixtape-of-the-week.vercel.app/" target="_blank" rel="noopener noreferrer">Listen to #1</a>
     </div>
   </div>
 </section>`;
