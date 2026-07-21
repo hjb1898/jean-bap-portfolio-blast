@@ -637,7 +637,7 @@ const BODY = `<div class="topbar">
         <div class="dir-txt">
           <div class="dir-kick">Maybe</div>
           <h4>Tangible Forms</h4>
-          <p>Just spitballing, but the whole thing could stretch off-screen into actual CDs or tapes, or even a zine. Who knows.</p>
+          <p>Just spitballing, but the whole thing could stretch off-screen into actual CDs or tapes, or even a zine. Who knows?</p>
         </div>
       </article>
     </div>
