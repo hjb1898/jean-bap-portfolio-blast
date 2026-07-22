@@ -383,7 +383,7 @@ const BODY = `<div class="topbar">
       <div class="qs-side">Admit One</div>
       <div class="qs-body">
         <div class="qs-tag"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--violet);display:inline-block"></span> The Position · № 001</div>
-        <p class="qs-quote"><span class="q">&ldquo;</span>Keep the music alive and bridge scenes of emotion.<span class="q">&rdquo;</span></p>
+        <p class="qs-quote"><span class="q">&ldquo;</span>To keep the music alive and bridge together scenes of emotion.<span class="q">&rdquo;</span></p>
         <div class="qs-foot">
           <span>Doors open · gone at week's end</span>
           <span class="qs-barcode" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
