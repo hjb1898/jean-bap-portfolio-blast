@@ -364,7 +364,7 @@ const BODY = `<div class="topbar">
         <div class="side-tag">Side A · the spark</div>
         <span class="arrow-note">where it began</span>
         <h4>Album of the day</h4>
-        <p>An online music player surfacing one some old Atlanta hardcore records, pulled straight from the ATL Hardcore IG page's vault. A cool techy way to help the scene, on a daily clock.</p>
+        <p>An online music player surfacing some old Atlanta hardcore records, pulled straight from the ATL Hardcore IG page's vault. A cool techy way to help the scene, on a daily clock.</p>
       </article>
       <article class="side b">
         <div class="side-tag">Side B · the pivot</div>
