@@ -401,7 +401,7 @@ const BODY = `<div class="topbar">
     <div class="sec-head"><div class="sec-num">02</div><h2 class="sec-title">Identity: <span class="accent">The Ticket</span></h2></div>
     <div class="brand-grid">
       <div class="brand-lead">
-        <p>Unlike a client build, Mixtape of the Week gets a brand of its own, and the whole thing is shaped like a ticket. Doors open. Admit one. A stub, a stamp, and a rotation that flips at midnight Monday. Day, Auto, and Night themes let the room change with the hour.</p>
+        <p>Mixtape of the Week's brand is shaped like a ticket. Doors open. Admit one. A stub, a stamp, and a rotation that flips at midnight Monday. And there's Day, Auto, and Night themes that let the room change with the hour.</p>
         <p>The look is cheap-paper and one bright ink: warm off-white, black type set like a printed setlist, and a single electric violet doing all the pointing. And because my weirdo brain can't help itself, the story got a narrator.</p>
       </div>
       <div class="character">
